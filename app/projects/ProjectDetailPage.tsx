@@ -4,6 +4,20 @@ import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import type { OutcomeIcon, ProjectDetail, WorkIcon } from "./project-details";
 
+const outcomeIconAssets: Record<OutcomeIcon, string> = {
+  megaphone: "/assets/outcome1.png",
+  bars: "/assets/outcome2.png",
+  shield: "/assets/outcome3.png",
+  star: "/assets/outcome4.png",
+};
+
+const workIconAssets: Record<WorkIcon, string> = {
+  creator: "/assets/content1.png",
+  social: "/assets/content2.png",
+  email: "/assets/content3.png",
+  "360": "/assets/content4.png",
+};
+
 function CornerFrame() {
   return (
     <>
@@ -16,73 +30,28 @@ function CornerFrame() {
 }
 
 function LineIcon({ type }: { type: OutcomeIcon }) {
-  if (type === "megaphone") {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden className="size-[31px]">
-        <path d="M4 13.5h3.6l9.4 4.2V6.3L7.6 10.5H4v3z" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />
-        <path d="M7.5 14l1.1 4.5h3" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
-        <path d="M19.1 9.2c.8.7 1.2 1.7 1.2 2.8s-.4 2.1-1.2 2.8" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
-      </svg>
-    );
-  }
-
-  if (type === "bars") {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden className="size-[31px]">
-        <path d="M5 19V9m7 10V5m7 14v-7" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-        <path d="M3.5 19.5h17" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-      </svg>
-    );
-  }
-
-  if (type === "shield") {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden className="size-[31px]">
-        <path d="M12 3.5l7 2.8v5.4c0 4.1-2.8 7.7-7 8.8-4.2-1.1-7-4.7-7-8.8V6.3l7-2.8z" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />
-        <path d="M9 12.1l2 2 4-4.2" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    );
-  }
-
   return (
-    <svg viewBox="0 0 24 24" aria-hidden className="size-[31px]">
-      <path d="M12 3.8l2.3 5.2 5.7.5-4.3 3.8 1.3 5.6-5-2.9-5 2.9 1.3-5.6L4 9.5 9.7 9 12 3.8z" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />
-    </svg>
+    <Image
+      src={outcomeIconAssets[type]}
+      alt=""
+      width={31}
+      height={31}
+      aria-hidden
+      className="size-[31px] object-contain"
+    />
   );
 }
 
 function WorkIconView({ type }: { type: WorkIcon }) {
-  if (type === "social") {
-    return (
-      <svg viewBox="0 0 18 18" aria-hidden className="size-[15px]">
-        <path d="M4 4h10v8H7.2L4 14.5V4z" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
-        <path d="M6.6 6.9h4.8M6.6 9h3.2" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
-      </svg>
-    );
-  }
-
-  if (type === "email") {
-    return (
-      <svg viewBox="0 0 18 18" aria-hidden className="size-[15px]">
-        <path d="M2.5 5h13v9h-13V5z" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
-        <path d="M3.2 5.7L9 10l5.8-4.3" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    );
-  }
-
-  if (type === "360") {
-    return (
-      <span className="grid size-[17px] place-items-center rounded-full border border-current font-[var(--font-inter)] text-[7px] font-bold leading-none tracking-[-0.3px]">
-        360
-      </span>
-    );
-  }
-
   return (
-    <svg viewBox="0 0 18 18" aria-hidden className="size-[15px]">
-      <path d="M4.2 15V6.1h9.6V15H4.2zM6.2 6.1V4.9A2.8 2.8 0 0 1 9 2.3a2.8 2.8 0 0 1 2.8 2.6v1.2" fill="none" stroke="currentColor" strokeWidth="1.35" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M7 9.4h4M7 11.7h3" fill="none" stroke="currentColor" strokeWidth="1.15" strokeLinecap="round" />
-    </svg>
+    <Image
+      src={workIconAssets[type]}
+      alt=""
+      width={17}
+      height={17}
+      aria-hidden
+      className="size-[17px] object-contain"
+    />
   );
 }
 
