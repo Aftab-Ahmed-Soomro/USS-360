@@ -1,28 +1,65 @@
+"use client";
+
+import { useState } from "react";
 import { Button } from "./common/Button";
 
 const navItems = ["About", "Solutions", "Projects", "Contact"];
 
 export function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <div className="bg-black">
-      <header className="relative z-10 flex h-[72px] items-center justify-between px-6 sm:px-10 lg:px-[119px] max-w-[1440px] mx-auto">
-      <nav aria-label="Main navigation" className="hidden items-center gap-[112px] md:flex">
-        {navItems.map((item) => (
-          <a
-            className="text-[16px] font-semibold tracking-[0] text-white transition hover:text-[#ff6b1f]"
-            href={`#${item.toLowerCase()}`}
-            key={item}
+      <header className="relative z-10 mx-auto flex w-full max-w-[1150px] flex-col px-6 py-4 md:min-h-[72px] md:flex-row md:items-center md:justify-between md:gap-8 md:py-0 ">
+        <div className="flex w-full items-center justify-between gap-3 md:order-2 md:w-auto md:shrink-0">
+          <Button className="h-[40px] max-w-[calc(100vw-96px)] shrink-0 px-4 text-[13px] font-bold min-[360px]:px-5 sm:h-[42px] sm:px-[27px] sm:text-[16px]">
+            Book a Consultation
+          </Button>
+          <button
+            type="button"
+            aria-label={isMenuOpen ? "Close main navigation" : "Open main navigation"}
+            aria-expanded={isMenuOpen}
+            aria-controls="main-navigation"
+            className="inline-flex size-10 shrink-0 flex-col items-center justify-center gap-1.5 rounded-full border border-white/25 text-white transition hover:border-[#ff6b1f] hover:text-[#ff6b1f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff5a05] md:hidden"
+            onClick={() => setIsMenuOpen((open) => !open)}
           >
-            {item}
-          </a>
-        ))}
-      </nav>
+            <span
+              className={`h-0.5 w-5 rounded-full bg-current transition ${
+                isMenuOpen ? "translate-y-2 rotate-45" : ""
+              }`}
+            />
+            <span
+              className={`h-0.5 w-5 rounded-full bg-current transition ${
+                isMenuOpen ? "opacity-0" : ""
+              }`}
+            />
+            <span
+              className={`h-0.5 w-5 rounded-full bg-current transition ${
+                isMenuOpen ? "-translate-y-2 -rotate-45" : ""
+              }`}
+            />
+          </button>
+        </div>
 
-      <div className="flex w-full items-center justify-between md:w-auto md:justify-end">
-        <span className="text-[16px] font-semibold text-white md:hidden">Scale</span>
-        <Button className="h-[42px] px-[27px] text-[16px] font-bold">Book a Consultation</Button>
-      </div>
-    </header>
+        <nav
+          id="main-navigation"
+          aria-label="Main navigation"
+          className={`mt-4 flex w-full flex-col gap-3 overflow-hidden border-t border-white/10 pt-4 transition-[max-height,opacity] duration-200 md:order-1 md:mt-0 md:w-auto md:flex-row md:items-center md:gap-8 md:overflow-visible md:border-0 md:pt-0 md:opacity-100 lg:gap-12 xl:gap-[112px] ${
+            isMenuOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0 md:max-h-none"
+          }`}
+        >
+          {navItems.map((item) => (
+            <a
+              className="py-1 text-[15px] font-medium tracking-[0] text-white transition hover:text-[#ff6b1f] md:py-0 md:text-[16px]"
+              href={`#${item.toLowerCase()}`}
+              key={item}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {item}
+            </a>
+          ))}
+        </nav>
+      </header>
     </div>
   );
 }
