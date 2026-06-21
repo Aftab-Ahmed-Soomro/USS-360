@@ -30,27 +30,27 @@ const trustedBrandImages = [
   {
     name: "Agency 8",
     image: "/assets/100brands/image 1.png",
-    className: "w-[210px] sm:w-[240px] lg:w-[270px]",
+    className: "w-[170px] sm:w-[180px]",
   },
   {
     name: "Vodafone",
     image: "/assets/brands/vodafone.png",
-    className: "w-[150px] sm:w-[172px] lg:w-[190px]",
+    className: "w-[150px] sm:w-[160px]",
   },
   {
     name: "Sadia Psychology",
     image: "/assets/brands/sadia.png",
-    className: "w-[190px] sm:w-[225px] lg:w-[255px]",
+    className: "w-[170px] sm:w-[180px]",
   },
   {
     name: "Flowork",
     image: "/assets/brands/flowork.png",
-    className: "w-[150px] sm:w-[175px] lg:w-[195px]",
+    className: "w-[170px] sm:w-[180px]",
   },
   {
     name: "Unilever",
     image: "/assets/100brands/image 3.png",
-    className: "w-[185px] sm:w-[215px] lg:w-[245px]",
+    className: "w-[130px] sm:w-[140px]",
   },
 ];
 
@@ -78,14 +78,14 @@ export function Brands() {
         ))}
       </div>
 
-      <div className="mt-[158px] text-center">
+      <div className="mt-[180px] text-center">
         <h2 className="text-[31px] font-medium leading-tight tracking-[-0.4px] sm:text-[34px]">
-          trusted by 100+ brands worldwide
+          trusted by 100+s brands worldwide
         </h2>
 
-        <div className="mx-auto mt-[39px] flex max-w-[1150px] flex-wrap items-center justify-center gap-x-10 gap-y-8 sm:gap-x-12 lg:flex-nowrap lg:justify-between lg:gap-x-8">
+        <div className="mx-auto mt-[30px] flex max-w-[1150px] flex-wrap items-center justify-center gap-x-10 gap-y-8 sm:gap-x-12 lg:flex-nowrap lg:justify-between lg:gap-x-8">
           {trustedBrandImages.map((brand) => (
-            <article className={`group relative h-[74px] max-w-full ${brand.className}`} key={brand.name}>
+            <article className={`group relative h-[100px] max-w-full ${brand.className}`} key={brand.name}>
               <Image
                 src={brand.image}
                 alt={`${brand.name} brand image`}
