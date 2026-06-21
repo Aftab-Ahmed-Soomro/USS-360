@@ -67,13 +67,17 @@ const systemItems = [
 const projects = [
   {
     name: "Cinnamood",
+    year: "2024",
+    copy: "Launching a German bakery franchise into the UAE market.",
     image: "/assets/company/cinamood-card.jpg",
-    copy: "Search and local campaigns for launch visibility, store traffic and purchase intent.",
+    tags: ["Web design & development", "Branding", "F&B"],
   },
   {
     name: "Yula Lounge",
+    year: "2024",
+    copy: "Transforming Yalseh into Yula – a modern Dubai beach club.",
     image: "/assets/company/yula-card.jpg",
-    copy: "Demand capture campaigns for a premium hospitality brand in a competitive market.",
+    tags: ["Web design & development", "Hospitality"],
   },
 ];
 
@@ -316,59 +320,81 @@ function GrowthSystem() {
 
 function CaseStudies() {
   return (
-    <section className="bg-black px-6 py-[70px] text-white  lg:py-[88px]">
+    <section className="bg-black px-6 py-[70px] text-white lg:py-[88px]">
       <div className="mx-auto max-w-[1150px]">
+        {/* Header */}
         <div className="flex flex-col gap-7 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="font-[var(--font-be-vietnam)] text-[10px] font-bold uppercase tracking-[3px] text-[#ff5500]">
-              Case Studies
+            <p className="font-[var(--font-be-vietnam)] text-[10px] font-extralight uppercase tracking-[3px] text-[#ff5500]">
+              Projects
             </p>
             <h2 className="mt-[18px] max-w-[520px] font-[var(--font-be-vietnam)] text-[31px] font-medium lowercase leading-[1.06] tracking-[-1.2px] sm:text-[46px]">
-              see how we turn
-              <br />
+              see how we turn{" "}
+              <br className="hidden sm:block" />
               search{" "}
               <span className="font-[var(--font-cormorant)] text-[1.12em] font-extralight timesFontFamily italic">
                 into revenue
               </span>
             </h2>
-            <p className="mt-[15px] max-w-[620px] font-[var(--font-inter)] text-[11.5px] leading-[1.75] text-white/62">
-              A look at how intent-driven campaigns help brands find demand,
-              convert it and scale what works.
+            <p className="mt-[15px] max-w-[720px] font-[var(--font-inter)] text-[14px] leading-[1.75] text-white/82">
+              Explore how we&apos;ve helped brands generate high-quality
+              leads and scale through Google Ads.
             </p>
           </div>
+
           <Link
-            className="inline-flex h-[34px] w-[148px] items-center justify-center rounded-full border border-white/50 font-[var(--font-be-vietnam)] text-[10.5px] font-bold text-white transition hover:border-white"
             href="/projects"
+            className="inline-flex h-[40px] shrink-0 items-center gap-2 self-start rounded-full border border-white px-5 font-[var(--font-be-vietnam)] text-[11px] font-medium text-white/90 transition hover:border-white hover:text-white md:self-end"
           >
-            View Projects
+            View all projects
+            <span aria-hidden="true">→</span>
           </Link>
         </div>
 
-        <div className="mt-[34px] grid gap-8 md:grid-cols-2">
+        {/* Cards */}
+        <div className="mt-[34px] grid gap-6 md:grid-cols-2">
           {projects.map((project) => (
-            <article className="group" key={project.name}>
-              <div className="relative aspect-[560/360] overflow-hidden rounded-[4px] bg-[#171717]">
+            <article
+              key={project.name}
+              className="group rounded-[20px] border border-white p-[14px] transition-colors hover:border-white/30"
+            >
+              <div className="relative aspect-[420/260] w-full overflow-hidden rounded-[12px] bg-[#171717]">
                 <Image
                   src={project.image}
                   alt={`${project.name} Google Ads campaign`}
                   fill
-                  sizes="(min-width: 768px) 50vw, 90vw"
+                  sizes="(min-width: 768px) 45vw, calc(100vw - 48px)"
                   className="object-cover transition duration-500 group-hover:scale-105"
                 />
               </div>
-              <h3 className="mt-[18px] font-[var(--font-be-vietnam)] text-[19px] font-medium leading-none">
-                {project.name}
-              </h3>
-              <p className="mt-[10px] max-w-[430px] font-[var(--font-inter)] text-[11.5px] leading-[1.65] text-white/62">
-                {project.copy}
-              </p>
-              <div className="mt-[14px] flex gap-2">
-                <span className="rounded-full border border-white/18 px-3 py-1 font-[var(--font-inter)] text-[10px] text-white/70">
-                  Search Ads
-                </span>
-                <span className="rounded-full border border-white/18 px-3 py-1 font-[var(--font-inter)] text-[10px] text-white/70">
-                  CRO
-                </span>
+
+              <div className="px-[8px] pt-[20px] pb-[4px]">
+                {/* Title + year */}
+                <div className="flex items-baseline justify-between gap-3">
+                  <h3 className="font-[var(--font-be-vietnam)] text-[19px] font-medium leading-none">
+                    {project.name}
+                  </h3>
+                  <span className="shrink-0 font-[var(--font-inter)] text-[12px] text-white/50">
+                    {project.year}
+                  </span>
+                </div>
+
+                {/* Copy */}
+                <p className="mt-[10px] max-w-[400px] font-[var(--font-inter)] text-[11.5px] leading-[1.65] text-white/62">
+                  {project.copy}
+                </p>
+
+                {/* Tags */}
+                <div className="mt-[14px] flex flex-wrap gap-2">
+                  {(project.tags ?? []).map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-full border border-white px-3 py-1 font-[var(--font-inter)] text-[10px] text-white/40"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
             </article>
           ))}
@@ -377,6 +403,7 @@ function CaseStudies() {
     </section>
   );
 }
+
 
 function WorkTogether() {
   return (

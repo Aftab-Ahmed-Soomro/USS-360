@@ -55,12 +55,32 @@ const portfolio = [
   },
 ];
 
-const trustedBrands = [
-  { name: "Cinnamood", image: "/assets/100brands/image 1.png" },
-  { name: "Vodafone", image: "/assets/brands/vodafone.png" },
-  { name: "Sadia", image: "/assets/brands/sadia.png" },
-  { name: "Flowork", image: "/assets/brands/flowork.png" },
-  { name: "Unilever", image: "/assets/100brands/image 3.png" },
+const trustedBrandImages = [
+  {
+    name: "Agency 8",
+    image: "/assets/100brands/image 1.png",
+    className: "w-[170px] sm:w-[180px]",
+  },
+  {
+    name: "Vodafone",
+    image: "/assets/brands/vodafone.png",
+    className: "w-[150px] sm:w-[160px]",
+  },
+  {
+    name: "Sadia Psychology",
+    image: "/assets/brands/sadia.png",
+    className: "w-[170px] sm:w-[180px]",
+  },
+  {
+    name: "Flowork",
+    image: "/assets/brands/flowork.png",
+    className: "w-[170px] sm:w-[180px]",
+  },
+  {
+    name: "Unilever",
+    image: "/assets/100brands/image 3.png",
+    className: "w-[130px] sm:w-[140px]",
+  },
 ];
 
 
@@ -325,13 +345,19 @@ function TrustedBrands() {
         <h2 className="font-[var(--font-be-vietnam)] text-[26px] font-medium leading-tight sm:text-[34px]">
           trusted by 100+ brands worldwide
         </h2>
-        <div className="mt-[35px] grid grid-cols-2 gap-4 sm:grid-cols-5 lg:gap-5">
-          {trustedBrands.map((brand) => (
-            <div className="relative aspect-[176/80]" key={brand.name}>
-              <Image src={brand.image} alt={`${brand.name} logo`} fill sizes="180px" className="object-contain" />
-            </div>
-          ))}
-        </div>
+        <div className="mx-auto mt-[30px] flex max-w-[1150px] flex-wrap items-center justify-center gap-x-10 gap-y-8 sm:gap-x-12 lg:flex-nowrap lg:justify-between lg:gap-x-8">
+                  {trustedBrandImages.map((brand) => (
+                    <article className={`group relative h-[100px] max-w-full ${brand.className}`} key={brand.name}>
+                      <Image
+                        src={brand.image}
+                        alt={`${brand.name} brand image`}
+                        fill
+                        sizes="(min-width: 1024px) 260px, (min-width: 640px) 220px, 46vw"
+                        className="object-contain opacity-90 saturate-[0.9] transition duration-500 group-hover:scale-105 group-hover:opacity-100"
+                      />
+                    </article>
+                  ))}
+                </div>
       </div>
     </section>
   );
@@ -381,8 +407,8 @@ export default function WebsitePage() {
       <NumbersWebsite />
       <ServicesSection />
       <PortfolioSection />
-      <Brands />
-      {/* <TrustedBrands /> */}
+      {/* <Brands /> */}
+      <TrustedBrands />
       <Testimonials />
       <Team />
       <FinalCta />

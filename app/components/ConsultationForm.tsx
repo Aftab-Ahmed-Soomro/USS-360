@@ -35,9 +35,9 @@ export function ConsultationForm() {
             <input className={darkInput} placeholder="Website" />
           </label>
         </div>
-        <label className="block font-[var(--font-inter)] text-[11px] font-medium leading-none">
+        <label className="block font-[var(--font-inter)] placeholder:text-white/45 text-[11px] font-medium leading-none">
           Services You Need
-          <select className={`${darkInput} appearance-none`}>
+          <select className={`${darkInput} text-white/45 appearance-none`}>
             <option>Select...</option>
             <option>Email Marketing</option>
             <option>Flow Automation</option>
@@ -99,7 +99,7 @@ export function LightConsultationForm() {
         </div>
         <label className="block font-[var(--font-inter)] text-[11px] font-medium leading-none">
           Services You Need
-          <select className={`${lightInput} appearance-none`}>
+          <select className={`${lightInput} text-gray-400/100 appearance-none`}>
             <option>Select...</option>
             <option>Email Marketing</option>
             <option>Flow Automation</option>

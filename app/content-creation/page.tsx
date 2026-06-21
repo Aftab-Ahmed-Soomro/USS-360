@@ -7,6 +7,7 @@ import { Numbers as NumbersSection } from "../components/Numbers";
 import { Team } from "../components/Team";
 import { Testimonials } from "../components/Testimonials";
 import { ConsultationForm, LightConsultationForm } from "../components/ConsultationForm";
+import { OnlyBrands } from "../components/OnlyBrands";
 
 const stats = [
   { value: "18.4K+", label: "Creative Assets Produced" },
@@ -396,7 +397,7 @@ export default function ContentCreationPage() {
       <ApproachSection />
       <ServicesSection />
       <ProcessSection />
-      <Brands />
+      <OnlyBrands />
       <Testimonials />
       <Team />
       <FinalCta />

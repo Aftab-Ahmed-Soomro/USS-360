@@ -80,7 +80,7 @@ export function Brands() {
 
       <div className="mt-[180px] text-center">
         <h2 className="text-[31px] font-medium leading-tight tracking-[-0.4px] sm:text-[34px]">
-          trusted by 100+s brands worldwide
+          trusted by 100+ brands worldwide
         </h2>
 
         <div className="mx-auto mt-[30px] flex max-w-[1150px] flex-wrap items-center justify-center gap-x-10 gap-y-8 sm:gap-x-12 lg:flex-nowrap lg:justify-between lg:gap-x-8">

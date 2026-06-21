@@ -284,9 +284,9 @@ function StrategyHero() {
   return (
     <section className="relative overflow-hidden bg-[#080808] px-6 pb-[34px] pt-[34px] text-white">
       <div className="pointer-events-none absolute left-0 top-0 h-full w-[44%] bg-[radial-gradient(circle_at_20%_20%,rgba(255,85,0,0.42),transparent_45%)]" />
-      <div className="relative mx-auto grid max-w-[1150px] gap-8 lg:grid-cols-[minmax(0,470px)_360px] lg:items-center lg:justify-between">
+      <div className="relative mx-auto grid max-w-[1150px] gap-8 lg:grid-cols-[minmax(0,470px)_430px] lg:items-center lg:justify-between">
         <div>
-          <h1 className="max-w-[420px] font-[var(--font-be-vietnam)] text-[36px] font-medium lowercase leading-[0.98] tracking-[-1.3px] sm:text-[48px]">
+          <h1 className="max-w-[480px] font-[var(--font-be-vietnam)] text-[36px] font-medium lowercase leading-[0.98] tracking-[-1.3px] sm:text-[48px]">
             strategy that drives
             <br />
             <span className="font-[var(--font-cormorant)] text-[1.14em] font-extralight timesFontFamily italic">
