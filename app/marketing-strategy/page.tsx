@@ -37,8 +37,7 @@ const strategySections: StrategySection[] = [
       before: "the",
       italic: "problem",
     },
-    copy:
-      "Are you are running marketing but without a clear strategy? Without a strategy, marketing becomes a waste of time and budget.",
+    copy: "Are you are running marketing but without a clear strategy? Without a strategy, marketing becomes a waste of time and budget.",
     bullets: [
       "Channels not aligned",
       "No clear positioning or messaging",
@@ -57,8 +56,7 @@ const strategySections: StrategySection[] = [
       before: "our",
       italic: "system",
     },
-    copy:
-      "We create structured strategies designed to connect all parts of your marketing.",
+    copy: "We create structured strategies designed to connect all parts of your marketing.",
     bullets: [
       {
         label: "Market and Audience Understanding",
@@ -87,8 +85,7 @@ const strategySections: StrategySection[] = [
     title: {
       italic: "services",
     },
-    copy:
-      "End-to-end strategic services that bring clarity, alignment, and direction to your marketing.",
+    copy: "End-to-end strategic services that bring clarity, alignment, and direction to your marketing.",
     bullets: [
       "Full Marketing Strategy Development",
       "Go-to-Market Strategy",
@@ -107,8 +104,7 @@ const strategySections: StrategySection[] = [
     title: {
       italic: "process",
     },
-    copy:
-      "A clear, four-step framework that turns insight into a strategy ready to execute.",
+    copy: "A clear, four-step framework that turns insight into a strategy ready to execute.",
     bullets: [
       "Step 1: Discovery and Analysis",
       "Step 2: Research and Insights",
@@ -125,8 +121,7 @@ const strategySections: StrategySection[] = [
     title: {
       italic: "engagements",
     },
-    copy:
-      "Whether you need clarity or a full growth plan, we have a way to work together.",
+    copy: "Whether you need clarity or a full growth plan, we have a way to work together.",
     bullets: [
       {
         label: "Initial Consultation",
@@ -162,13 +157,17 @@ const strategyStats = [
 const relatedProjects = [
   {
     name: "Cinnamood",
-    copy: "A launch strategy built around clarity, community, content and measurable growth.",
+    year: "2024",
+    copy: "Launching a German bakery franchise into the UAE market.",
     image: "/assets/company/cinamood-card.jpg",
+    tags: ["Web design & development", "Branding", "F&B"],
   },
   {
     name: "Yula Lounge",
-    copy: "Positioning, campaign direction and content strategy for a premium hospitality brand.",
+    year: "2024",
+    copy: "Transforming Yalseh into Yula – a modern Dubai beach club.",
     image: "/assets/company/yula-card.jpg",
+    tags: ["Web design & development", "Hospitality"],
   },
 ];
 
@@ -198,7 +197,7 @@ function BulletList({
 
         return (
           <li
-            className={`flex items-start gap-[13px] font-[var(--font-inter)] text-[12px] leading-[1.55] ${
+            className={`flex items-start gap-[13px] font-[var(--font-inter)] text-[12px] leading-[1.55] tracking-[1px] ${
               isLight ? "text-black/58" : "text-white/90"
             }`}
             key={key}
@@ -209,7 +208,9 @@ function BulletList({
                 <strong className="font-bold">{bullet}</strong>
               ) : (
                 <>
-                  <strong className={`${isLight ? "text-black" : "text-white"} font-bold`}>
+                  <strong
+                    className={`${isLight ? "text-black" : "text-white"} font-bold`}
+                  >
                     {bullet.label}:
                   </strong>{" "}
                   {bullet.detail}
@@ -233,7 +234,7 @@ function StrategyPanel({ section }: { section: StrategySection }) {
     >
       <p
         className={`font-[var(--font-be-vietnam)] text-[8px] font-bold uppercase tracking-[4px] ${
-          isLight ? "text-black/44" : "text-[#ff5500]"
+          isLight ? "text-black/44" : "text-white/90"
         }`}
       >
         {section.eyebrow}
@@ -293,7 +294,8 @@ function StrategyHero() {
             </span>
           </h1>
           <p className="mt-[17px] max-w-[395px] font-[var(--font-inter)] text-[12px] leading-[1.65] text-white/82">
-            We build marketing strategies that connect every channel, campaign and decision to clear business growth.
+            We build marketing strategies that connect every channel, campaign
+            and decision to clear business growth.
           </p>
           <Link
             className="mt-[18px] inline-flex h-[29px] min-w-[112px] items-center justify-center rounded-full bg-[#ff5500] px-5 font-[var(--font-be-vietnam)] text-[9px] font-bold text-white transition hover:bg-[#ff6b1f]"
@@ -312,22 +314,32 @@ function RelatedProjects() {
   return (
     <section className="bg-[#080808] px-6 py-[56px] text-white">
       <div className="mx-auto max-w-[1150px]">
-        <div className="flex items-end justify-between gap-6">
-          <h2 className="font-[var(--font-be-vietnam)] text-[26px] font-medium lowercase leading-none tracking-[-0.7px]">
+        {/* Header */}
+        <div className="flex items-center justify-between gap-6">
+          <h2 className="font-[var(--font-be-vietnam)] text-[28px] sm:text-[32px] md:text-[38px] font-medium lowercase leading-none tracking-[-0.7px]">
             related{" "}
             <span className="font-[var(--font-cormorant)] text-[1.18em] font-extralight timesFontFamily italic">
               projects
             </span>
           </h2>
-          <Link className="font-[var(--font-inter)] text-[10px] text-white/75 hover:text-white" href="/projects">
-            View all projects -&gt;
+
+          <Link
+            href="/projects"
+            className="hidden sm:inline-flex shrink-0 items-center gap-2 rounded-full border border-white/30 px-5 py-3 font-[var(--font-inter)] text-[12px] text-white/85 transition-colors hover:border-white/60 hover:text-white"
+          >
+            View all projects
+            <span aria-hidden="true">→</span>
           </Link>
         </div>
 
-        <div className="mt-[26px] grid gap-[24px] md:grid-cols-2">
+        {/* Cards */}
+        <div className="mt-[40px] grid gap-[24px] md:grid-cols-2">
           {relatedProjects.map((project) => (
-            <article className="border-b border-white/35 pb-[23px]" key={project.name}>
-              <div className="relative aspect-[420/245] overflow-hidden rounded-[6px] bg-[#111]">
+            <article
+              key={project.name}
+              className="rounded-[20px] border border-white/15 p-[14px] transition-colors hover:border-white/30"
+            >
+              <div className="relative aspect-[420/260] w-full overflow-hidden rounded-[12px] bg-[#111]">
                 <Image
                   src={project.image}
                   alt={`${project.name} marketing strategy project`}
@@ -336,14 +348,46 @@ function RelatedProjects() {
                   className="object-cover"
                 />
               </div>
-              <h3 className="mt-[14px] font-[var(--font-be-vietnam)] text-[16px] font-medium leading-none">
-                {project.name}
-              </h3>
-              <p className="mt-[8px] max-w-[360px] font-[var(--font-inter)] text-[11px] leading-[1.55] text-white/62">
-                {project.copy}
-              </p>
+
+              <div className="px-[10px] pt-[24px] pb-[6px]">
+                {/* Title + year */}
+                <div className="flex items-baseline justify-between gap-3">
+                  <h3 className="font-[var(--font-be-vietnam)] text-[22px] font-medium leading-none">
+                    {project.name}
+                  </h3>
+                  <span className="shrink-0 font-[var(--font-inter)] text-[14px] text-white/50">
+                    {project.year}
+                  </span>
+                </div>
+
+                {/* Copy */}
+                <p className="mt-[14px] max-w-[400px] font-[var(--font-inter)] text-[14px] leading-[1.55] text-white/60">
+                  {project.copy}
+                </p>
+
+                {/* Tags */}
+                <div className="mt-[20px] flex flex-wrap gap-[10px]">
+                  {(project.tags ?? []).map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-full border border-white/25 px-[14px] py-[7px] font-[var(--font-inter)] text-[12px] text-white/75"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </article>
           ))}
+
+          {/* Mobile-only view all link, shown below cards on small screens */}
+          <Link
+            href="/projects"
+            className="sm:hidden inline-flex w-fit items-center gap-2 rounded-full border border-white/30 px-5 py-3 font-[var(--font-inter)] text-[12px] text-white/85 transition-colors hover:border-white/60 hover:text-white"
+          >
+            View all projects
+            <span aria-hidden="true">→</span>
+          </Link>
         </div>
       </div>
     </section>
@@ -353,7 +397,7 @@ function RelatedProjects() {
 function FinalCta() {
   return (
     <section className="bg-[#f5f4f1] px-6 py-[78px] text-center text-black sm:px-10 lg:px-[48px]">
-      <h2 className="mx-auto max-w-[430px] font-[var(--font-be-vietnam)] text-[30px] font-medium lowercase leading-[1.08] tracking-[-1px]">
+      <h2 className="mx-auto max-w-[800px] font-[var(--font-be-vietnam)] text-[36px] sm:text-[55px] font-medium lowercase leading-[1.08] tracking-[-1px]">
         build a strategy that
         <br />
         actually{" "}
@@ -361,19 +405,19 @@ function FinalCta() {
           works
         </span>
       </h2>
-      <p className="mx-auto mt-[15px] max-w-[430px] font-[var(--font-inter)] text-[12px] leading-[1.6] text-black/62">
+      <p className="mx-auto mt-[15px] max-w-[800px] font-[var(--font-inter)] text-[17px] leading-[1.6] text-black/62">
         If your marketing feels disconnected, it’s time for a clearer approach.
       </p>
-      <div className="mt-[22px] flex flex-col items-center justify-center gap-3 sm:flex-row">
+      <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
         <Link
-          className="inline-flex h-[31px] min-w-[128px] items-center justify-center rounded-full bg-[#ff5500] px-6 font-[var(--font-be-vietnam)] text-[10px] font-bold text-white transition hover:bg-[#ff6b1f]"
+          className="inline-flex h-[42px] min-w-[190px] items-center justify-center rounded-full bg-[#ff5500] px-8 font-[var(--font-be-vietnam)] text-[12px] font-bold text-white transition hover:bg-[#ff6b1f]"
           href="/contact"
         >
           Book a Consultation
         </Link>
         <Link
-          className="inline-flex h-[31px] min-w-[128px] items-center justify-center rounded-full border border-black/35 px-6 font-[var(--font-be-vietnam)] text-[10px] font-bold text-black transition hover:border-black"
-          href="/projects"
+          className="font-[var(--font-be-vietnam)] text-[13px] font-semibold text-black transition hover:text-white border-[#1A1A1A4D] border rounded-full px-6 h-[48px] inline-flex items-center justify-center"
+          href="#services"
         >
           Book a Strategy Call
         </Link>
