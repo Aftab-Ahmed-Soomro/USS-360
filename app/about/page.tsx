@@ -2,6 +2,9 @@ import Image from "next/image";
 import { Footer } from "../components/Footer";
 import { Button } from "../components/common/Button";
 import { Header } from "../components/Header";
+import BrandElevationVideo from "../components/BrandElevationVideo";
+import { Numbers } from "../components/Numbers";
+import { Team } from "../components/Team";
 
 const team = [
   {
@@ -51,114 +54,128 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-[#080808] text-white">
       <Header />
+      
       <main>
-        <section className="relative bg-white text-black">
-          <div className="bg-black text-white">
-            <div className="relative mx-auto min-h-[293px] max-w-[1150px] px-6 pt-[50px]">
-              <p className="font-[var(--font-be-vietnam)] text-[10px] font-medium uppercase leading-none tracking-[5px] text-white">
-                ABOUT
-              </p>
-              <h1 className="mt-[31px] max-w-[1150px] font-[var(--font-be-vietnam)] text-[21px] font-bold leading-[1.05] tracking-normal">
-                We&apos;re not your typical marketing agency.
-                <span className="mt-[2px] block font-[var(--font-cormorant)] text-[74px] font-extralight timesFontFamily italic leading-[0.72] tracking-normal"  style={{ fontFamily: 'Times New Roman, Times, serif' }}>
-                  we are uss
-                </span>
-              </h1>
-              <Button className="mt-[36px] h-[34px] px-[17px] text-[10px]">
-                Book a Consultation
-              </Button>
+        <section className="relative w-full bg-[#080808] py-20 overflow-hidden">
+          {/* 3-column grid: big text | center image | description text */}
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px_1fr] xl:grid-cols-[1fr_500px_1fr] items-stretch min-h-[90vh]">
+
+            {/* LEFT — Big heading */}
+            <div className="flex items-center pl-6 md:pl-12 lg:pl-16 py-16 lg:py-0 order-1 lg:order-none">
+              <h2
+                className="text-white font-black uppercase leading-[0.82] tracking-[-0.02em]"
+                style={{ fontSize: 'clamp(3.2rem, 6vw, 8.5rem)' }}
+              >
+                WE ARE
+                <br />
+                USS<span className="text-[#ff5a00]">.</span>
+              </h2>
             </div>
-          </div>
 
-          <div className="relative mx-auto max-w-[1150px] px-6 py-[40px]  lg:min-h-[225px]">
-            <p className="max-w-[480px] font-[var(--font-be-vietnam)] text-[15px] font-normal leading-[1.48] tracking-normal">
-              At USS, we focus on one thing, growth that actually translates into revenue. We
-              help brands across the US, UK, and Middle East scale through high-performance Meta
-              Ads, Google Ads, and retention-driven email systems.
-              <br />
-              <br />
-              At some point, you realise guessing doesn&apos;t scale.
-            </p>
-
-            <div className="relative mt-8 aspect-[345/393] w-full overflow-hidden sm:max-w-[345px] px-6 mr-6 lg:absolute lg:right-0 lg:top-[-199px] lg:mt-0">
+            {/* CENTER — Tall portrait image, fills grid cell height */}
+            <div className="relative order-2 lg:order-none min-h-[600px]">
               <Image
                 src="/assets/uss.png"
-                alt="USS strategy team planning a growth campaign"
+                alt="USS team collaborating"
                 fill
+                className=" object-center"
                 priority
-                sizes="(min-width: 1024px) 345px, 90vw"
-                className="object-cover object-center"
-              />
-            </div>
-          </div>
-        </section>
-
-        <section className="relative overflow-hidden bg-[#11100f] px-6 py-[78px] text-white  lg:py-[113px]">
-          <div className="pointer-events-none absolute left-[-90px] top-[-110px] h-[360px] w-[360px] rounded-full bg-[#7a2609] opacity-80 blur-[110px]" />
-          <div className="pointer-events-none absolute bottom-[-120px] right-[-80px] h-[360px] w-[360px] rounded-full bg-[#8a330d] opacity-80 blur-[112px]" />
-
-          <div className="relative mx-auto grid max-w-[1150px] gap-12 md:grid-cols-[424px_minmax(0,420px)] md:items-center md:justify-between">
-            <div className="relative mx-auto aspect-[424/505] w-full max-w-[424px] overflow-hidden rounded-[12px] bg-[#f6efe3]">
-              <Image
-                src="/assets/founder.jpg"
-                alt="Emmanuel Cole Williams, Founder and CEO of USS"
-                fill
-                sizes="(min-width: 768px) 424px, 86vw"
-                className="object-cover object-[center_62%]"
+                sizes="(min-width: 1280px) 560px, (min-width: 1024px) 480px, 100vw"
               />
             </div>
 
-            <div className="max-w-[420px]">
-              <h2 className="text-[44px] font-bold leading-[0.96] tracking-[-1.8px] sm:text-[52px]">
-                meet our
-                <span className="mt-2 block font-[var(--font-cormorant)] text-[56px] font-extralight timesFontFamily italic leading-[0.82] tracking-[-0.8px] text-[#ff5500] sm:text-[64px]">
-                  founder
-                </span>
-              </h2>
-              <p className="mt-[35px] text-[15px] font-normal leading-[1.65] text-white">
-                Over the past 12 years, I have built & scaled multiple businesses across the US, UK & Middle East, both my own companies and for clients. Having worked with 50+ SME clients across multiple industries at different stages of growth.
-In my experience most businesses fail because their marketing systems aren’t structured properly. 
-              </p>
-              <p className="mt-[28px] inline-flex min-h-11 items-center rounded-full bg-white/10 px-6 text-[11px] font-bold leading-none text-white">
-                Emmanuel Cole Williams Founder &amp; CEO of USS
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-[#080808] px-6 py-[92px] text-white  lg:pb-[139px] lg:pt-[112px]">
-          <div className="mx-auto max-w-[1150px]">
-            <h2 className="px-0 text-[40px] font-bold leading-none tracking-[-1.5px] sm:text-[50px] lg:px-[52px]">
-              meet USS{" "}
-              <span className="font-[var(--font-cormorant)] text-[1.08em] font-extralight timesFontFamily italic tracking-[-0.7px]">
-                team
-              </span>
-            </h2>
-
-            <div className="mt-[38px] flex items-center gap-3">
-              <ArrowButton label="Previous team member" direction="left" />
-              <div className="grid min-w-0 flex-1 grid-cols-1 gap-[14px] sm:grid-cols-2 lg:grid-cols-4">
-                {team.map((member) => (
-                  <article
-                    className="relative aspect-[280/490] overflow-hidden"
-                    key={member.name}
-                    style={{ backgroundColor: member.color }}
-                  >
-                    <Image
-                      src={member.image}
-                      alt={`${member.name} ${member.role}`}
-                      fill
-                      sizes="(min-width: 1024px) 280px, (min-width: 640px) 43vw, 82vw"
-                      className="object-cover"
-                      style={{ objectPosition: member.position }}
-                    />
-                  </article>
-                ))}
+            {/* RIGHT — Small description text */}
+            <div className="flex items-center justify-end px-8   py-16 lg:py-0 order-3 lg:order-none">
+              <div className="text-right text-[#c0bfbf] max-w-[360px] xl:max-w-[400px] flex flex-col gap-8">
+                <p className="text-[14px] leading-[1.95] font-medium">
+                  At USS, We Focus On One Thing, Growth That Actually Translates Into Revenue. We Help Brands Across The US, UK, And Middle East Scale Through High-Performance Meta Ads, Google Ads, And Retention-Driven Email Systems.
+                </p>
+                <p className="text-[14px] leading-[1.95] font-medium">
+                  At Some Point, You Realize Guessing Doesn&apos;t Scale.
+                </p>
               </div>
-              <ArrowButton label="Next team member" direction="right" />
             </div>
+
           </div>
         </section>
+
+        <BrandElevationVideo />
+
+        <section className="relative overflow-hidden bg-black px-6 py-16 md:py-24 lg:py-32 text-black">
+
+          {/* Top heading */}
+          <div className="mx-auto max-w-[1200px] mb-12 md:mb-16">
+            <p className="text-[#fff] text-[15px] md:text-[17px] font-medium tracking-normal leading-none" style={{ fontSize: 'clamp(1.5rem, 2.5vw, 3rem)', fontWeight: 400 }}>
+              meet our founder &
+            </p>
+            <h2
+              className="text-[#e05c2a] italic leading-[0.9]"
+              style={{ fontFamily: 'Times New Roman, Times, serif', fontSize: 'clamp(2rem, 4vw, 4rem)', fontWeight: 300 }}
+            >
+              <span style={{ fontFamily: "Arial, Helvetica, sans-serif", color: "white", fontSize: 'clamp(1.8rem, 3vw, 3rem)', fontWeight: 400}}>
+                ceo {" "}
+              </span>
+              emmanuel
+            </h2>
+          </div>
+
+          {/* 3-column body */}
+          <div className="mx-auto max-w-[1200px] grid grid-cols-1 md:grid-cols-[240px_1fr] lg:grid-cols-[280px_1fr_280px] gap-10 lg:gap-16 items-start">
+
+            {/* LEFT — Portrait photo */}
+            <div className="relative w-full max-w-[280px] mx-auto md:mx-0">
+              <div className="relative aspect-[3/4] w-full overflow-hidden bg-[#f0ece6]">
+                <Image
+                  src="/assets/founder.jpg"
+                  alt="Emmanuel Cole Williams, Founder and CEO of USS"
+                  fill
+                  sizes="(min-width: 1024px) 280px, (min-width: 768px) 240px, 80vw"
+                  className="object-cover object-[center_10%]"
+                />
+              </div>
+            </div>
+
+            {/* CENTER — Bio + Bold quote */}
+            <div className="flex flex-col gap-8 lg:gap-10">
+              <p className="text-[12px] leading-[1.9] text-[#aaa] max-w-[260px]">
+                My name is Emmanuel, Founder & CEO of USS. Over the past 12 years, I have built & scaled multiple businesses across the US, UK & Middle East, both my own companies and for clients. Having worked with 50+ SME clients across multiple industries at different stages of growth.
+              </p>
+              <blockquote className="text-[1.45rem] md:text-[1.65rem] lg:text-[1.85rem] font-bold leading-[1.25] tracking-[-0.01em] text-white max-w-[500px]">
+                &ldquo;Most businesses don&apos;t fail because of effort &ndash; they fail because they&apos;re following the wrong strategy.&rdquo;
+              </blockquote>
+            </div>
+
+            {/* RIGHT — World map (desktop only) */}
+            <div className="hidden lg:flex items-start justify-end pt-2">
+              <div className="relative w-full max-w-[260px]">
+                <h1 className="text-white">
+                  Global Presence
+                </h1>
+                <Image
+                  src="/assets/smallMap.png"
+                  alt="Global reach — US, UK and Middle East"
+                  width={260}
+                  height={160}
+                  className="object-contain opacity-100"
+                />
+                {/* Orange dot connectors */}
+                <div className="absolute top-[38%] left-[18%] w-2 h-2 rounded-full bg-[#e05c2a]" />
+                <div className="absolute top-[30%] left-[46%] w-2 h-2 rounded-full bg-[#e05c2a]" />
+                <div className="absolute top-[42%] left-[72%] w-2 h-2 rounded-full bg-[#e05c2a]" />
+                {/* Connector lines */}
+                <svg className="absolute inset-0 w-full h-full" viewBox="0 0 260 160" fill="none">
+                  <line x1="49" y1="61" x2="120" y2="49" stroke="#e05c2a" strokeWidth="0.8" strokeOpacity="0.7" />
+                  <line x1="120" y1="49" x2="188" y2="68" stroke="#e05c2a" strokeWidth="0.8" strokeOpacity="0.7" />
+                </svg>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <Numbers />
+
+        <Team />
       </main>
 
       <Footer />
