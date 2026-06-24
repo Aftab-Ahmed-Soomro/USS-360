@@ -7,6 +7,7 @@ import { Team } from "../components/Team";
 import { Testimonials } from "../components/Testimonials";
 import { ConsultationForm } from "../components/ConsultationForm";
 import { Brands } from "../components/Brands";
+import { GoodCompanyMap } from "../components/GoodCompanyMap";
 
 const inputClass =
   "mt-[6px] h-[29px] w-full rounded-[5px] border border-white/75 bg-black px-[9px] font-[var(--font-inter)] text-[10px] text-white outline-none placeholder:text-white/40 focus:border-[#ff5500]";
@@ -411,6 +412,7 @@ export default function WebsitePage() {
       <TrustedBrands />
       <Testimonials />
       <Team />
+      <GoodCompanyMap />
       <FinalCta />
       <Footer />
     </main>

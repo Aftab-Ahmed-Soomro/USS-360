@@ -7,6 +7,7 @@ import { Numbers } from "../components/Numbers";
 import { Team } from "../components/Team";
 import { Testimonials } from "../components/Testimonials";
 import { LightConsultationForm } from "../components/ConsultationForm";
+import { GoodCompanyMap } from "../components/GoodCompanyMap";
 
 const problemPoints = [
   "Messages sent without strategy",
@@ -376,6 +377,7 @@ export default function WhatsappAndSmsPage() {
       <ServicesSection />
       <Testimonials />
       <Team />
+      <GoodCompanyMap />
       <FinalCta />
       <Footer />
     </main>

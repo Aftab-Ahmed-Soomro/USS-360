@@ -9,6 +9,7 @@ import { Services } from "../components/Services";
 import { Team } from "../components/Team";
 import { Testimonials } from "../components/Testimonials";
 import { ConsultationForm } from "../components/ConsultationForm";
+import { GoodCompanyMap } from "../components/GoodCompanyMap";
 
 const failPoints = [
   "Campaigns without strategy",
@@ -254,6 +255,7 @@ export default function EmailMarketingPage() {
       <Services />
       <EmailVisuals />
       <WorkWithUs />
+      <GoodCompanyMap />
       <Team />
       <Testimonials />
       <FinalCta />

@@ -8,6 +8,7 @@ import { Team } from "../components/Team";
 import { Testimonials } from "../components/Testimonials";
 import { ConsultationForm, LightConsultationForm } from "../components/ConsultationForm";
 import { OnlyBrands } from "../components/OnlyBrands";
+import { GoodCompanyMap } from "../components/GoodCompanyMap";
 
 const stats = [
   { value: "18.4K+", label: "Creative Assets Produced" },
@@ -400,6 +401,7 @@ export default function ContentCreationPage() {
       <OnlyBrands />
       <Testimonials />
       <Team />
+      <GoodCompanyMap />
       <FinalCta />
       <Footer />
     </main>

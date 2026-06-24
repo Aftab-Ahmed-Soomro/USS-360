@@ -7,6 +7,7 @@ import { Numbers as NumbersSection } from "../components/Numbers";
 import { Team } from "../components/Team";
 import { Testimonials } from "../components/Testimonials";
 import { LightConsultationForm } from "../components/ConsultationForm";
+import { GoodCompanyMap } from "../components/GoodCompanyMap";
 
 const stats = [
   { value: "500M+", label: "Total Reach" },
@@ -153,6 +154,37 @@ function SocialServices() {
   );
 }
 
+function FinalCta() {
+  return (
+    <section className="bg-black px-6 py-[70px] text-white  lg:py-[78px]">
+      <div className="mx-auto max-w-[1150px] text-center">
+        <p className="font-[var(--font-be-vietnam)] text-[10px] font-medium uppercase tracking-[4px] text-[#ff5500]">
+           LET&apos;S SCALE
+        </p>
+        <h2 className="mt-7 font-[var(--font-be-vietnam)] text-[36px] font-medium leading-[1.08] tracking-[-1.5px] sm:text-[55px]">
+          turn your database
+          <br />
+          into{" "}
+          <span className="font-[var(--font-cormorant)] text-[1.12em] font-extralight timesFontFamily italic text-[#ff5500]">
+            repeat revenue
+          </span>
+        </h2>
+        <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <Link
+            className="inline-flex h-[42px] min-w-[190px] items-center justify-center rounded-full bg-[#ff5500] px-8 font-[var(--font-be-vietnam)] text-[12px] font-bold text-white transition hover:bg-[#ff6b1f]"
+            href="/contact"
+          >
+            Book a Consultation
+          </Link>
+          <Link className="font-[var(--font-be-vietnam)] text-[13px] font-medium text-white/80 transition hover:text-white border-white border rounded-full px-6 h-[48px] inline-flex items-center justify-center" href="#services">
+            Book a Strategy Call
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function SocialMediaManagementPage() {
   return (
     <main className="min-h-screen bg-black">
@@ -165,6 +197,8 @@ export default function SocialMediaManagementPage() {
       <SocialServices />
       <Testimonials />
       <Team />
+      <GoodCompanyMap />
+      <FinalCta />
       <Footer />
     </main>
   );

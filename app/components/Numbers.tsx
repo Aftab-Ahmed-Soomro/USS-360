@@ -15,9 +15,9 @@ type NumbersProps = {
 };
 
 const defaultStats = [
-  { value: "40%", label: "Avg. Open Rate" },
-  { value: "2-5%", label: "Avg. Click Through Rate" },
-  { value: "0.2%", label: "Avg. Unsubscribe Rate" },
+  { value: "5x", label: "ROAS Achieved" },
+  { value: "55M", label: "AED Generated in Revenue" },
+  { value: "500k", label: "Leads Delivered" },
   { value: "100+", label: "Brands Worldwide" },
 ];
 

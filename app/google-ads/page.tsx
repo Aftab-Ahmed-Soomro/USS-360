@@ -7,6 +7,7 @@ import { Numbers as NumbersSection } from "../components/Numbers";
 import { Team } from "../components/Team";
 import { Testimonials } from "../components/Testimonials";
 import { LightConsultationForm } from "../components/ConsultationForm";
+import { GoodCompanyMap } from "../components/GoodCompanyMap";
 
 const inputClass =
   "mt-[6px] h-[29px] w-full rounded-[5px] border border-black/15 bg-white px-[9px] font-[var(--font-inter)] text-[9px] text-black outline-none placeholder:text-black/35 focus:border-[#ff5500]";
@@ -447,6 +448,40 @@ function WorkTogether() {
   );
 }
 
+function FinalCta() {
+  return (
+    <section className="bg-black px-6 py-[62px] text-white  lg:py-[76px]">
+      <div className="mx-auto max-w-[1150px] text-center">
+        <p className="font-[var(--font-be-vietnam)] text-[10px] font-normal uppercase tracking-[3px] text-[#ff5500]">
+          LET'S SCALE
+        </p>
+        <h2 className="mt-[18px] font-[var(--font-be-vietnam)] text-[32px] font-medium lowercase leading-[1.08] tracking-[-1.2px] sm:text-[46px]">
+          ready to scale
+          <br />
+          with{" "}
+          <span className="font-[var(--font-cormorant)] text-[1.12em] font-extralight timesFontFamily italic text-[#ff5500]">
+            meta ads?
+          </span>
+        </h2>
+        <div className="mt-[26px] flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <Link
+            className="inline-flex h-[36px] min-w-[170px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[11px] font-bold text-white transition hover:bg-[#ff6b1f]"
+            href="/contact"
+          >
+            Book a Consulation
+          </Link>
+          <Link
+            className="inline-flex h-[36px] min-w-[170px] items-center justify-center rounded-full border border-white/30 px-7 font-[var(--font-be-vietnam)] text-[11px] font-bold text-white transition hover:border-white"
+            href="/projects"
+          >
+            Book a Strategy Call
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function GoogleAdsPage() {
   return (
     <main className="min-h-screen bg-black">
@@ -461,6 +496,7 @@ export default function GoogleAdsPage() {
       <Testimonials />
       <Team />
       <WorkTogether />
+      <GoodCompanyMap />
       <Footer />
     </main>
   );

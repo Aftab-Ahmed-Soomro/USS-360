@@ -9,6 +9,9 @@ import { Services } from "./components/Services";
 import { Testimonials } from "./components/Testimonials";
 import { Team } from "./components/Team";
 import { Button } from "./components/common/Button";
+import { HomeHero } from "./components/HomeHero";
+import { MarketingSystems } from "./components/MarketingSystems";
+import { GoodCompanyMap } from "./components/GoodCompanyMap";
 
 const failPoints = [
   "No clear customer journey.",
@@ -16,6 +19,27 @@ const failPoints = [
   "Flows are missing or outdated.",
   "Revenue leaks after purchase.",
   "The audience does not feel nurtured.",
+];
+
+const process = [
+  {
+    number: "01",
+    title: "DISCOVER",
+    copy: "We dive deep into your business, audience, and market to uncover real opportunities.",
+    icon: "/assets/searchIcon.png",
+  },
+  {
+    number: "02",
+    title: "STRATEGISE",
+    copy: "We create a customised strategy with clear objectives, roadmap and success metrics.",
+    icon: "/assets/fileIcon.png",
+  },
+  {
+    number: "03",
+    title: "EXECUTE",
+    copy: "We execute with precision, bringing your strategy to life and scaling measurable results.",
+    icon: "/assets/arrowIcon.png",
+  },
 ];
 
 const workWays = [
@@ -120,6 +144,85 @@ function EmailSystem() {
   );
 }
 
+function Strategic () {
+  return (
+    <section className="bg-[#f7f7f6] px-6 pb-[86px] pt-[80px] text-black  lg:pb-[124px] lg:pt-[91px]">
+          <div className="mx-auto max-w-[1150px]">
+            <div className="text-center">
+              <p className="text-[10px] font-bold uppercase leading-none tracking-[7px] text-[#ff5500]">
+                OUR APPROACH
+              </p>
+              <h2 className="mt-[35px] text-[42px] font-normal leading-[0.98] tracking-[-1.5px] sm:text-[55px]">
+                a strategic process.
+                <span className="mt-[13px] block font-[var(--font-cormorant)] text-[51px] font-extralight timesFontFamily italic leading-[0.8] tracking-[-0.8px] text-[#ff5500] sm:text-[62px]">
+                  built for growth.
+                </span>
+              </h2>
+              <p className="mx-auto mt-[37px] max-w-[500px] text-[17px] leading-[1.6]">
+                We combine insight, strategy, and execution to create measurable growth that
+                lasts.
+              </p>
+            </div>
+
+            <div className="mt-[93px] grid gap-y-12 md:grid-cols-3 md:gap-y-0">
+              {process.map((step, index) => (
+                <article
+                  className={`relative px-0 md:min-h-[355px] md:px-[38px] ${
+                    index > 0 ? "md:border-l md:border-black/10" : ""
+                  }`}
+                  key={step.number}
+                >
+                  <div className="flex items-start justify-between gap-6">
+                    <span className="font-[var(--font-cormorant)] text-[118px] font-medium leading-[0.72] tracking-[-4px]">
+                      {step.number}
+                    </span>
+                    <span className="grid size-[86px] shrink-0 place-items-center rounded-full bg-white text-[22px] font-normal text-[#ff5500] shadow-[0_18px_32px_rgba(0,0,0,0.08)]">
+                      <img className="size-[20px]" src={step.icon} alt="" />
+                    </span>
+                  </div>
+                  <div className="mt-[48px] h-px w-9 bg-[#ff5500]" />
+                  <h3 className="mt-[33px] text-[24px] font-bold leading-none tracking-[-0.3px]">
+                    {step.title}
+                  </h3>
+                  <p className="mt-[30px] max-w-[280px] text-[14px] font-normal leading-[1.7] text-black/70">
+                    {step.copy}
+                  </p>
+                </article>
+              ))}
+            </div>
+
+            <div className="mx-auto mt-[107px] grid max-w-[800px] overflow-hidden rounded-[16px] border border-black/[0.03] bg-white shadow-[0_22px_42px_rgba(0,0,0,0.08)] md:min-h-[110px] md:grid-cols-[452px_1fr]">
+              <div className="flex items-center gap-[21px] px-8 py-7 md:px-[38px]">
+                <span className="grid size-[46px] shrink-0 place-items-center border border-gray-200 p-3.5 rounded-full text-[22px] font-normal text-white shadow-[0_8px_16px_rgba(0,0,0,0.08)]">
+                  <img src="/assets/star.png" alt="" />
+                </span>
+                <div>
+                  <h3 className="text-[14px] font-bold leading-none tracking-[-0.2px]">
+                    More Than a Process. A Partnership.
+                  </h3>
+                  <p className="mt-[11px] max-w-[350px] text-[11.5px] leading-[1.55] text-black/60">
+                    We don&apos;t just follow a process &ndash; we partner with you at every
+                    stage to drive sustainable, long-term growth.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-center border-t border-black/[0.06] px-8 py-7 md:border-l md:border-t-0 md:px-[31px]">
+                <a
+                  href="#contact"
+                  className="inline-flex h-11 w-full max-w-[300px] items-center justify-center rounded-full bg-[#ff5500] px-6 text-[7.5px] font-medium uppercase tracking-[2px] text-white transition hover:bg-[#ff6b1f]"
+                >
+                  Let&apos;s Build Your Growth Story 
+                  <span className="ml-[14px] text-[14px] leading-none">
+                    <img className="size-[16px]" src="/assets/smallRightArrow.png" alt="" />
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+  )
+}
+
 function WorkWithUs() {
   return (
     <section className="relative z-10 bg-[#f4f4f3] px-6 py-[86px] text-black ">
@@ -156,22 +259,51 @@ function WorkWithUs() {
 
 function FinalCta() {
   return (
-    <section className="relative z-10 bg-black px-6 py-[78px] text-white ">
-      <div className="mx-auto max-w-[1150px] text-center">
-        <p className="text-[11px] font-bold uppercase tracking-[4px] text-[#ff5500]">START NOW</p>
-        <h2 className="mt-8 text-[39px] font-medium leading-[1.08] tracking-[-1.6px] sm:text-[55px]">
-          turn your database
+    <section className="relative z-10 px-6 py-[120px] text-white overflow-hidden">
+      {/* Background Glows */}
+      <div className="pointer-events-none absolute left-[-15%] top-[-10%] h-[600px] w-[600px] rounded-full bg-[#ff5500] opacity-20 blur-[100px]" />
+      <div className="pointer-events-none absolute right-[-15%] bottom-[-10%] h-[600px] w-[600px] rounded-full bg-[#ff5500] opacity-20 blur-[100px]" />
+
+      <div className="relative mx-auto max-w-[800px] text-center">
+        <div className="flex items-center justify-center gap-2 mb-8">
+          <div className="h-1.5 w-1.5 rounded-full bg-[#ff5500]"></div>
+          <p className="text-[9px] font-bold uppercase tracking-[3px] text-white/90">
+            FULL-STACK MARKETING
+          </p>
+        </div>
+        
+        <h2 className="mb-10 text-[42px] font-medium leading-[1.05] tracking-[-1.5px] sm:text-[60px]">
+          we are your{" "}
+          <span className="font-[var(--font-cormorant)] text-[1.1em] font-light timesFontFamily italic">
+            360&deg;
+          </span>
           <br />
-          into{" "}
-          <span className="font-[var(--font-cormorant)] text-[1.12em] font-extralight timesFontFamily italic text-[#ff5500]">
-            repeat revenue
+          <span className="font-[var(--font-cormorant)] text-[1.1em] font-light timesFontFamily italic">
+            marketing agency
           </span>
         </h2>
-        <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Button className="h-[44px] px-8 text-[12px]">Book a Consultation</Button>
-          <a className="text-[13px] font-bold text-white/80 transition hover:text-white" href="#services">
-            View Services
-          </a>
+        
+        <div className="mx-auto max-w-[600px] space-y-8 text-[12px] leading-[1.7] tracking-[1.4px] text-white/80">
+          <p>
+            Calling ourselves a data-driven, problem solving, people connecting, digital crazy, 
+            talent engaging creative agency is too long winded.. so we call ourselves USS.
+          </p>
+          <p>
+            We bring all digital platforms to one connected system designed to scale.
+          </p>
+        </div>
+
+        <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <button className="h-[40px] w-full sm:w-auto px-10 rounded-full bg-[#ff5500] text-[8px] font-bold text-white transition-colors hover:bg-[#ff6b1f]">
+            Book a Call
+          </button>
+          <button className="flex h-[40px] w-full sm:w-auto px-8 items-center justify-center gap-2 rounded-full border border-white bg-transparent text-[8px] font-bold text-white transition-colors hover:bg-white/5">
+            See How We Scale
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-1 opacity-80">
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </button>
         </div>
       </div>
     </section>
@@ -186,16 +318,20 @@ const Page = () => {
       <div className="pointer-events-none absolute bottom-[-120px] left-0 h-[180px] w-full bg-[#5b1803] opacity-55 blur-[80px]" />
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[4px] bg-[#222]" />
       <Header />
-      <Hero />
+      <HomeHero />
+      {/* <Hero /> */}
       <Numbers />
-      <EmailFails />
-      <EmailSystem />
       <Brands />
-      <Services />
-      <EmailVisuals />
-      <WorkWithUs />
+      <MarketingSystems />
+      <Strategic />
+      <GoodCompanyMap />
+      {/* <EmailFails /> */}
+      {/* <EmailSystem /> */}
+      {/* <Services /> */}
+      {/* <EmailVisuals /> */}
+      {/* <WorkWithUs /> */}
       <Team />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <FinalCta />
       <Footer />
     </div>

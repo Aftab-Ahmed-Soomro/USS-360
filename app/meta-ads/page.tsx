@@ -7,6 +7,7 @@ import { Numbers as NumbersSection } from "../components/Numbers";
 import { Team } from "../components/Team";
 import { Testimonials } from "../components/Testimonials";
 import { ConsultationForm } from "../components/ConsultationForm";
+import { GoodCompanyMap } from "../components/GoodCompanyMap";
 
 const failPoints = [
   "Poor creative gets ignored",
@@ -370,6 +371,7 @@ export default function MetaAdsPage() {
       <BrandWork />
       <Testimonials />
       <Team />
+      <GoodCompanyMap />
       <FinalCta />
       <Footer />
     </main>

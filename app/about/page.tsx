@@ -34,26 +34,7 @@ const team = [
   },
 ];
 
-const process = [
-  {
-    number: "01",
-    title: "DISCOVER",
-    copy: "We dive deep into your business, audience, and market to uncover real opportunities.",
-    icon: "/assets/searchIcon.png",
-  },
-  {
-    number: "02",
-    title: "STRATEGISE",
-    copy: "We create a customised strategy with clear objectives, roadmap and success metrics.",
-    icon: "/assets/fileIcon.png",
-  },
-  {
-    number: "03",
-    title: "EXECUTE",
-    copy: "We execute with precision, bringing your strategy to life and scaling measurable results.",
-    icon: "/assets/arrowIcon.png",
-  },
-];
+
 
 function ArrowButton({ label, direction }: { label: string; direction: "left" | "right" }) {
   return (
@@ -175,81 +156,6 @@ In my experience most businesses fail because their marketing systems aren’t s
                 ))}
               </div>
               <ArrowButton label="Next team member" direction="right" />
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-[#f7f7f6] px-6 pb-[86px] pt-[80px] text-black  lg:pb-[124px] lg:pt-[91px]">
-          <div className="mx-auto max-w-[1150px]">
-            <div className="text-center">
-              <p className="text-[10px] font-bold uppercase leading-none tracking-[7px] text-[#ff5500]">
-                OUR APPROACH
-              </p>
-              <h2 className="mt-[35px] text-[42px] font-normal leading-[0.98] tracking-[-1.5px] sm:text-[55px]">
-                a strategic process.
-                <span className="mt-[13px] block font-[var(--font-cormorant)] text-[51px] font-extralight timesFontFamily italic leading-[0.8] tracking-[-0.8px] text-[#ff5500] sm:text-[62px]">
-                  built for growth.
-                </span>
-              </h2>
-              <p className="mx-auto mt-[37px] max-w-[500px] text-[17px] leading-[1.6]">
-                We combine insight, strategy, and execution to create measurable growth that
-                lasts.
-              </p>
-            </div>
-
-            <div className="mt-[93px] grid gap-y-12 md:grid-cols-3 md:gap-y-0">
-              {process.map((step, index) => (
-                <article
-                  className={`relative px-0 md:min-h-[355px] md:px-[38px] ${
-                    index > 0 ? "md:border-l md:border-black/10" : ""
-                  }`}
-                  key={step.number}
-                >
-                  <div className="flex items-start justify-between gap-6">
-                    <span className="font-[var(--font-cormorant)] text-[118px] font-medium leading-[0.72] tracking-[-4px]">
-                      {step.number}
-                    </span>
-                    <span className="grid size-[86px] shrink-0 place-items-center rounded-full bg-white text-[22px] font-normal text-[#ff5500] shadow-[0_18px_32px_rgba(0,0,0,0.08)]">
-                      <img className="size-[20px]" src={step.icon} alt="" />
-                    </span>
-                  </div>
-                  <div className="mt-[48px] h-px w-9 bg-[#ff5500]" />
-                  <h3 className="mt-[33px] text-[24px] font-bold leading-none tracking-[-0.3px]">
-                    {step.title}
-                  </h3>
-                  <p className="mt-[30px] max-w-[280px] text-[14px] font-normal leading-[1.7] text-black/70">
-                    {step.copy}
-                  </p>
-                </article>
-              ))}
-            </div>
-
-            <div className="mx-auto mt-[107px] grid max-w-[800px] overflow-hidden rounded-[16px] border border-black/[0.03] bg-white shadow-[0_22px_42px_rgba(0,0,0,0.08)] md:min-h-[110px] md:grid-cols-[452px_1fr]">
-              <div className="flex items-center gap-[21px] px-8 py-7 md:px-[38px]">
-                <span className="grid size-[46px] shrink-0 place-items-center border border-gray-200 p-3.5 rounded-full text-[22px] font-normal text-white shadow-[0_8px_16px_rgba(0,0,0,0.08)]">
-                  <img src="/assets/star.png" alt="" />
-                </span>
-                <div>
-                  <h3 className="text-[14px] font-bold leading-none tracking-[-0.2px]">
-                    More Than a Process. A Partnership.
-                  </h3>
-                  <p className="mt-[11px] max-w-[350px] text-[11.5px] leading-[1.55] text-black/60">
-                    We don&apos;t just follow a process &ndash; we partner with you at every
-                    stage to drive sustainable, long-term growth.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-center border-t border-black/[0.06] px-8 py-7 md:border-l md:border-t-0 md:px-[31px]">
-                <a
-                  href="#contact"
-                  className="inline-flex h-11 w-full max-w-[300px] items-center justify-center rounded-full bg-[#ff5500] px-6 text-[8.2px] font-medium uppercase tracking-[2px] text-white transition hover:bg-[#ff6b1f]"
-                >
-                  Let&apos;s Build Your Growth Story 
-                  <span className="ml-[14px] text-[14px] leading-none">
-                    <img className="size-[16px]" src="/assets/smallRightArrow.png" alt="" />
-                  </span>
-                </a>
-              </div>
             </div>
           </div>
         </section>

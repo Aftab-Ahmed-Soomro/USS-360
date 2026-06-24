@@ -7,6 +7,7 @@ import { Numbers } from "../components/Numbers";
 import { Team } from "../components/Team";
 import { Testimonials } from "../components/Testimonials";
 import { ConsultationForm } from "../components/ConsultationForm";
+import { GoodCompanyMap } from "../components/GoodCompanyMap";
 
 type Bullet =
   | string
@@ -439,6 +440,7 @@ export default function MarketingStrategyPage() {
       <RelatedProjects />
       <Testimonials />
       <Team />
+      <GoodCompanyMap />
       <FinalCta />
       <Footer />
     </main>
