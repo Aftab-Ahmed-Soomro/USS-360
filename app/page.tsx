@@ -324,6 +324,7 @@ const Page = () => {
       <Brands />
       <MarketingSystems />
       <Strategic />
+      <Testimonials />
       <GoodCompanyMap />
       {/* <EmailFails /> */}
       {/* <EmailSystem /> */}
