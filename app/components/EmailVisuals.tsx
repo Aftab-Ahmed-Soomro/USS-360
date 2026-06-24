@@ -25,18 +25,18 @@ const emailVisuals = [
 
 export function EmailVisuals() {
   return (
-    <section className="relative z-10 bg-[#f5f5f4] px-6 py-[72px] text-black lg:py-[92px]">
+    <section className="relative z-10 bg-[#000] px-6 py-[72px] text-black lg:py-[92px]">
       <div className="mx-auto flex w-full max-w-[1150px] flex-col gap-[44px]">
         <div className="grid gap-8 lg:grid-cols-[360px_minmax(0,520px)] lg:items-start lg:justify-between">
-          <h2 className="max-w-[310px] font-[var(--font-be-vietnam)] text-[37px] font-medium leading-[1.02] tracking-[-0.03em] text-black sm:text-[42px]">
+          <h2 className="max-w-[310px] font-[var(--font-be-vietnam)] text-[37px] text-white font-medium leading-[1.02] tracking-[-0.03em]  sm:text-[42px]">
               email design{" "}
               <span className="block font-[var(--font-cormorant)] text-[1.08em] font-extralight timesFontFamily italic">
                 visuals
               </span>
           </h2>
 
-          <p className="max-w-[520px] font-[var(--font-be-vietnam)] text-[14px] font-normal leading-[1.75] text-black/70 sm:text-[15px] lg:pt-[10px]">
-            A clean showcase area for email design visuals from your drive. Replace these placeholders with final assets.
+          <p className="max-w-[520px] font-[var(--font-be-vietnam)] text-[14px] font-normal leading-[1.75] text-white/70 sm:text-[15px] lg:pt-[10px]">
+            Take a look at our email designs, created to balance strong branding, clear communication and results that actually matter.
           </p>
         </div>
 

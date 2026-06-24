@@ -3,7 +3,7 @@ import Image from "next/image";
 export function VideoPreview() {
   return (
     <section className="relative z-10 bg-[#080808] px-0 pb-[5px] text-white">
-      <div className="relative mx-auto aspect-[16/9] w-full overflow-hidden border-y border-black sm:aspect-[2.05/1] lg:aspect-[2.72/1]">
+      <div className="relative mx-auto aspect-[16/9] w-full overflow-hidden border-y border-black sm:aspect-[2.05/1] lg:aspect-[2.72/1] min-h-[600px]">
         <Image
           src="/assets/swimming video.png"
           alt="Luxury rooftop pool video preview"

@@ -1,9 +1,7 @@
 import Image from "next/image";
 import { Header } from "./components/Header";
 import { Brands } from "./components/Brands";
-import { EmailVisuals } from "./components/EmailVisuals";
 import { Footer } from "./components/Footer";
-import { Hero } from "./components/Hero";
 import { Numbers } from "./components/Numbers";
 import { Services } from "./components/Services";
 import { Testimonials } from "./components/Testimonials";
@@ -319,7 +317,6 @@ const Page = () => {
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[4px] bg-[#222]" />
       <Header />
       <HomeHero />
-      {/* <Hero /> */}
       <Numbers />
       <Brands />
       <MarketingSystems />
@@ -329,7 +326,6 @@ const Page = () => {
       {/* <EmailFails /> */}
       {/* <EmailSystem /> */}
       {/* <Services /> */}
-      {/* <EmailVisuals /> */}
       {/* <WorkWithUs /> */}
       <Team />
       {/* <Testimonials /> */}

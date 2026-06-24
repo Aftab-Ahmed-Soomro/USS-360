@@ -1,52 +1,111 @@
 import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 
-const services = [
-  "Automation and Flow Setup",
-  "Campaign Planning and Management",
-  "Segmentation and Strategy",
-  "Email Design and Copywriting",
-  "Performance Tracking and Optimisation",
+type ServiceCard = {
+  title: string;
+  image: string;
+  href?: string;
+};
+
+const performanceServices: ServiceCard[] = [
+  { title: "Marketing & Growth Strategy", image: "/assets/Performance Services/1.jpg" },
+  { title: "Google Ads", image: "/assets/Performance Services/2.jpg" },
+  { title: "Meta Ads", image: "/assets/Performance Services/3.jpg" },
+  { title: "Email & CRM", image: "/assets/Performance Services/4.jpg" },
+  { title: "WhatsApp & SMS", image: "/assets/Performance Services/5.jpg" },
 ];
+
+const creativeServices: ServiceCard[] = [
+  { title: "Social Media Management", image: "/assets/Creative Services/1.jpg" },
+  { title: "Content Creation", image: "/assets/Creative Services/2.jpg" },
+  { title: "UX & Web Design", image: "/assets/Creative Services/3.jpg" },
+  { title: "Website Development", image: "/assets/Creative Services/4.jpg" },
+  { title: "Branding & Graphics", image: "/assets/Creative Services/5.jpg" },
+];
+
+function ServiceGroup({
+  eyebrow,
+  description,
+  services,
+}: {
+  eyebrow: string;
+  description: string;
+  services: ServiceCard[];
+}) {
+  return (
+    <div className="w-full">
+      {/* Section header row */}
+      <div className="flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-end">
+        <h3 className="text-[28px] font-medium tracking-[-0.5px] text-[#111111] sm:text-[32px]">
+          {eyebrow}
+        </h3>
+        <p className="max-w-[300px] text-right text-[13px] leading-[1.5] text-[#000] sm:text-[14px]">
+          {description}
+        </p>
+      </div>
+
+      {/* Card grid */}
+      <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-5">
+        {services.map((service) => (
+          <a
+            key={service.title}
+            href={service.href ?? "#"}
+            className="group relative aspect-[4/5] overflow-hidden rounded-xl bg-[#0a0a0a]"
+          >
+            {/* Image */}
+            <Image
+              src={service.image}
+              alt={service.title}
+              fill
+              sizes="(min-width: 1024px) 220px, (min-width: 640px) 30vw, 45vw"
+              className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+            />
+
+            {/* Bottom gradient for legibility */}
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+
+            {/* Title */}
+            <span className="absolute bottom-3 left-3 right-12 text-[13px] font-medium leading-[1.25] text-white sm:text-[14px]">
+              {service.title}
+            </span>
+
+            {/* Arrow button */}
+            <span className="absolute bottom-3 right-3 flex h-8 w-8 items-center justify-center rounded-full bg-white/15 backdrop-blur-sm transition-colors duration-300 ease-out group-hover:bg-[#f4651f]">
+              <ArrowUpRight className="h-4 w-4 text-white" strokeWidth={2} />
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export function Services() {
   return (
-    <section id="services" className="relative z-10 bg-[#080808] px-6 py-[86px] text-white ">
-      <div className="mx-auto grid max-w-[1150px] gap-12 lg:grid-cols-[minmax(0,520px)_minmax(0,430px)] lg:items-center lg:justify-between">
-        <div>
-          <h2 className="max-w-[470px] text-[30px] font-medium leading-[1.05] tracking-[-1.7px] sm:text-[43px]">
-            our{" "}
-            <span className="font-[var(--font-cormorant)] text-[1.12em] font-extralight timesFontFamily italic">
-              email marketing
-            </span>
-            <br />
-            services
-          </h2>
+    <section className="w-full bg-white px-6 py-16 text-[#111111] sm:px-10 lg:px-16">
+      <div className="mx-auto flex max-w-[1150px] flex-col items-center gap-3 text-center">
+        <span className="text-[9px] font-semibold uppercase tracking-[1.5px] text-[#f4651f]">
+          Our Solutions
+        </span>
+        <h2 className="text-[40px] font-medium leading-[1.1] tracking-[-1px] text-[#111111]">
+          marketing systems
+          <br />
+          aligned for{" "}
+          <span className="timesFontFamily italic text-[#f4651f]">growth</span>
+        </h2>
+      </div>
 
-          <div className="mt-[46px] border-t border-white/35">
-            {services.map((service) => (
-              <button
-                className="flex min-h-[52px] w-full items-center justify-between border-b border-white/20 text-left text-[15px] font-medium"
-                key={service}
-                type="button"
-              >
-                {service}
-                <span className="mr-4">
-                  <img className="w-[16px] h-[16px]" src="/assets/red_arrow_icon.png" alt="" />
-                </span>
-              </button>
-            ))}
-          </div>
-        </div>
-
-        <div className="relative aspect-[430/520] overflow-hidden bg-[#141414]">
-          <Image
-            src="/assets/offer.png"
-            alt="Email marketing service visual"
-            fill
-            sizes="(min-width: 1024px) 430px, 90vw"
-            className="object-cover object-top"
-          />
-        </div>
+      <div className="mx-auto mt-14 flex max-w-[1280px] flex-col gap-12">
+        <ServiceGroup
+          eyebrow="Performance Services"
+          description="Building brand presence, trust and demand through powerful creative."
+          services={performanceServices}
+        />
+        <ServiceGroup
+          eyebrow="Creative Services"
+          description="Driving measurable growth through data, strategy and performance."
+          services={creativeServices}
+        />
       </div>
     </section>
   );
