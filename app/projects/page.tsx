@@ -3,222 +3,266 @@ import Link from "next/link";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 
-const filters = [
-  "Web Design & Development",
-  "Meta Ads",
-  "Google Ads",
-  "Email marketing",
-  "Content Creation",
-  "Social Management",
-  "WhatsApp & SMS",
-];
-
-const projects = [
+const categories = [
   {
-    title: "Agency 8",
-    href: "/projects/agency-8",
-    image: "/assets/allProjects/agency8.png",
-    alt: "Luxury property terrace overlooking Dubai",
-    description:
-      "USS partnered with Agency 8 to build a strong digital foundation, combining a custom website with integrated marketing systems.",
-    tags: ["Website", "Email Marketing", "Web App Marketing"],
+    name: "F&B",
+    topTag: "Helping Brands Establish",
+    bottomTag: "Brands Launching",
+    projects: [
+      {
+        title: "CINNAMOOD",
+        description: "Franchise Expanding To Dubai",
+        image: "/assets/projectsPagePics/cinamood.jpg",
+        tags: ["UAE Expansion"],
+        href: "#",
+      },
+      {
+        title: "Coshe",
+        description: "Wellness Juices",
+        image: "/assets/projectsPagePics/Coshe.jpg",
+        tags: ["Brand Launch"],
+        href: "#",
+      },
+      {
+        title: "Oak Restaurant",
+        description: "Building awareness for a new dining experience.",
+        image: "/assets/projectsPagePics/oak.png",
+        tags: ["Restaurant Launch"],
+        href: "#",
+      }
+    ]
   },
   {
-    title: "Yula Beach Lounge",
-    href: "/projects/yula-beach-lounge",
-    image: "/assets/allProjects/yula.jpg",
-    imagePosition: "50% 47%",
-    alt: "Beach lounge and pool terrace at night",
-    description:
-      "We worked closely with Yula Lounge to ease the process of their rebrand from Yulava Lounge. An Arabic beach lounge turned into a modern beach club restaurant.",
-    tags: ["Content Creation", "Social Media", "Email Marketing"],
+    name: "Hospitality",
+    topTag: "Travel & Tourism",
+    bottomTag: "Helping Tourism Grow",
+    projects: [
+      {
+        title: "SupperClub",
+        description: "Scaling Supperclub Membership",
+        image: "/assets/projectsPagePics/supper.png",
+        tags: ["Scaling Business"],
+        href: "#",
+      },
+      {
+        title: "Yula",
+        description: "Transforming Yalseh into Yula",
+        image: "/assets/projectsPagePics/yula.jpg",
+        tags: ["Rebrand"],
+        href: "#",
+      },
+      {
+        title: "Reclaim",
+        description: "Launching Reclaim in the US",
+        image: "/assets/projectsPagePics/reclaim.png",
+        tags: ["Scaling Business"],
+        href: "#",
+      }
+    ]
   },
   {
-    title: "Sadia Psychology",
-    href: "/projects/sadia-psychology",
-    image: "/assets/allProjects/sadia.png",
-    imagePosition: "50% 45%",
-    alt: "Portrait of Sadia Psychology founder",
-    description:
-      "Black Friday launch with Sadia Psychology. Launching her first product, a journal, selling out 45% of total sales in first 24 hours.",
-    tags: ["Marketing Strategy", "Email Marketing", "Content"],
+    name: "Professional services",
+    topTag: "Helping Business Expand",
+    bottomTag: "Helping Business Grow",
+    projects: [
+      {
+        title: "Flowork",
+        description: "Office Opening in Dubai Hills",
+        image: "/assets/projectsPagePics/flowork.png",
+        tags: ["Scaling Business"],
+        href: "#",
+      },
+      {
+        title: "Residency Advanced",
+        description: "Paid Search Lead Generation",
+        image: "/assets/projectsPagePics/residency.png",
+        tags: ["Scaling Business"],
+        href: "#",
+      }
+    ]
   },
   {
-    title: "Cinnamood",
-    href: "/projects/cinamood",
-    image: "/assets/allProjects/cinamood.jpg",
-    imagePosition: "50% 48%",
-    alt: "Cinnamood drink campaign",
-    description:
-      "Successfully launched Cinnamood in Dubai while building local awareness and demand from day one, without losing the essence of the original German franchise.",
-    tags: ["SEO Marketing", "Content Creation", "Social Media"],
+    name: "Technology and startups",
+    topTag: "Helping Business Expand",
+    bottomTag: "Helping Business Grow",
+    projects: [
+      {
+        title: "PrecisionTalk",
+        description: "AI Voice Agent Expanding in UAE",
+        image: "/assets/projectsPagePics/precision.png",
+        tags: ["Scaling Business"],
+        href: "#",
+      },
+      {
+        title: "Disturbed Innovations Group",
+        description: "3D Immersive Experiences",
+        image: "/assets/projectsPagePics/disturbed.jpg",
+        tags: ["Scaling Business"],
+        href: "#",
+      }
+    ]
   },
   {
-    title: "SupperClub",
-    href: "/projects/supperclub",
-    image: "/assets/allProjects/supper.png",
-    imagePosition: "50% 53%",
-    alt: "Dessert and drink hospitality campaign",
-    description:
-      "Drawing members in-growth while maintaining a premium brand image and attracting the right audience for hotels, spas and beach club spaces across the world.",
-    tags: ["360 Marketing", "Marketing Strategy", "Content"],
+    name: "Events & Entertainment",
+    topTag: "Helping Business Expand",
+    bottomTag: "Helping Business Grow",
+    projects: [
+      {
+        title: "Women Who Thrive",
+        description: "Networking Event Membership",
+        image: "/assets/projectsPagePics/women.jpg",
+        tags: ["Scaling Business"],
+        href: "#",
+      },
+      {
+        title: "Adidas UAE",
+        description: "Product Event For New Launch",
+        image: "/assets/projectsPagePics/adidas.jpg",
+        tags: ["Scaling Business"],
+        href: "#",
+      },
+      {
+        title: "Blank DXB",
+        description: "New Warehouse Events",
+        image: "/assets/projectsPagePics/blank.png",
+        tags: ["Scaling Business"],
+        href: "#",
+      }
+    ]
   },
   {
-    title: "Adidas Middle East",
-    href: "/projects/adidas-middle-east",
-    image: "/assets/allProjects/addidas.png",
-    imagePosition: "50% 42%",
-    alt: "Adidas Middle East launch event",
-    description:
-      "USS partnered with Adidas Dubai to support the launch of a new product, delivering an event-led activation alongside content creation.",
-    tags: ["End To End", "Content Creation", "Product Launch"],
+    name: "E-Commerce",
+    topTag: "Helping Business Expand",
+    bottomTag: "Helping Business Grow",
+    projects: [
+      {
+        title: "Afro Maya",
+        description: "Fashion E-Commerce Brand",
+        image: "/assets/projectsPagePics/afro.jpg",
+        tags: ["Scaling Business"],
+        href: "#",
+      },
+      {
+        title: "Afro Maya",
+        description: "Fashion E-Commerce Brand",
+        image: "/assets/projectsPagePics/afro.jpg",
+        tags: ["Scaling Business"],
+        href: "#",
+      }
+    ]
   },
   {
-    title: "Women Who Thrive",
-    href: "/projects/women-who-thrive",
-    image: "/assets/allProjects/women.jpg",
-    alt: "Women Who Thrive campaign event",
-    description:
-      "Increase membership, strengthen brand presence and build a highly engaged community with marketing approach across all platforms.",
-    tags: ["360 Marketing", "Membership", "Social Media"],
+    name: "Wellness & Beauty",
+    topTag: "Helping Business Expand",
+    bottomTag: "Helping Business Grow",
+    projects: [
+      {
+        title: "M&N Nail Spa",
+        description: "Beauty Treatment Salon in Dubai",
+        image: "/assets/projectsPagePics/m&n.png",
+        tags: ["Scaling Business"],
+        href: "#",
+      }
+    ]
   },
   {
-    title: "Blank DXB",
-    href: "/projects/blank-dxb",
-    image: "/assets/allProjects/blank.jpg",
-    alt: "Large blank production space",
-    description:
-      "End-to-end management of new concept in Dubai from ideation and content through Google and Meta ads to build awareness and drive sales.",
-    tags: ["360 Marketing", "End-To-End", "Paid Media"],
+    name: "Talent Projects",
+    topTag: "Helping Business Expand",
+    bottomTag: "Helping Business Grow",
+    projects: [
+      {
+        title: "Sadia Phycology",
+        description: "Black Friday Planner Project",
+        image: "/assets/projectsPagePics/sadia.png",
+        tags: ["Scaling Business"],
+        href: "#",
+      },
+      {
+        title: "Tish Wonders",
+        description: "New E-Book Launch",
+        image: "/assets/projectsPagePics/tesh.png",
+        tags: ["Scaling Business"],
+        href: "#",
+      }
+    ]
   },
   {
-    title: "Afro Maya",
-    image: "/assets/allProjects/afro.png",
-    imagePosition: "50% 38%",
-    alt: "Fashion portrait campaign",
-    description:
-      "Fashion brand looking for global domination. USS created a fully functional website, design along with strong digital presence to increase purchases.",
-    tags: ["Website Design", "Email Marketing", "Social Media"],
-  },
-  {
-    title: "Picksperience",
-    href: "/projects/picksperience",
-    image: "/assets/allProjects/pick.png",
-    imagePosition: "50% 43%",
-    alt: "Warm interior venue space",
-    description:
-      "Picksperience is a startup focused on product sampling, helping brands deliver samples directly to targeted audiences.",
-    tags: ["Paid Media", "UX Design", "Content Creation"],
-  },
-  {
-    title: "Reclaim US",
-    href: "/projects/reclaim-us",
-    image: "/assets/allProjects/reclaim.jpg",
-    imagePosition: "50% 43%",
-    alt: "Airport travel scene",
-    description:
-      "Reclaim is a travel service in the United States designed to simplify the airport experience by allowing passengers to skip check-in entirely.",
-    tags: ["360 Marketing", "Paid Media", "Social Media"],
-  },
-  {
-    title: "Flowork",
-    href: "/projects/flowork",
-    image: "/assets/allProjects/flowork.png",
-    imagePosition: "50% 48%",
-    alt: "Premium workspace interior",
-    description:
-      "Flowork is a modern business centre offering flexible workspace solutions, including coworking spaces, private offices, virtual rooms and podcast studios.",
-    tags: ["SEO Marketing", "Strategy", "Content Creation"],
-  },
-];
-
-function ProjectCard({
-  project,
-}: {
-  project: (typeof projects)[number];
-}) {
-  const content = (
-    <article className="min-w-0">
-      <div className="relative aspect-[376/280] overflow-hidden rounded-[7px] bg-[#e8e8e5]">
-        <Image
-          src={project.image}
-          alt={project.alt}
-          fill
-          sizes="(min-width: 1280px) 376px, (min-width: 768px) 31vw, 92vw"
-          className="object-cover"
-          style={{ objectPosition: project.imagePosition ?? "center" }}
-        />
-      </div>
-      <h2 className="mt-[22px] font-[var(--font-be-vietnam)] text-[23px] font-medium leading-[1.05] tracking-[-0.7px] text-black sm:text-[24px]">
-        {project.title}
-      </h2>
-      <p className="mt-[11px] min-h-[54px] max-w-[350px] font-[var(--font-inter)] text-[12px] font-normal leading-[1.48] tracking-[-0.25px] text-[#5d5d5d] sm:text-[12.5px]">
-        {project.description}
-      </p>
-      <div className="mt-[18px] flex flex-wrap gap-[7px]">
-        {project.tags.map((tag) => (
-          <span
-            className="rounded-full border border-[#d7d7d2] bg-white px-[13px] py-[5px] font-[var(--font-inter)] text-[9.5px] font-normal leading-none tracking-[-0.15px] text-[#424242]"
-            key={tag}
-          >
-            {tag}
-          </span>
-        ))}
-      </div>
-    </article>
-  );
-
-  if (project.href) {
-    return (
-      <Link
-        aria-label={`View ${project.title} project`}
-        className="block rounded-[7px] transition duration-200 hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#ff5500]"
-        href={project.href}
-      >
-        {content}
-      </Link>
-    );
+    name: "Real Estate",
+    topTag: "Helping Business Expand",
+    bottomTag: "Helping Business Grow",
+    projects: [
+      {
+        title: "Agency 8",
+        description: "Real Estate Agency in Dubai",
+        image: "/assets/projectsPagePics/agency.png",
+        tags: ["Scaling Business"],
+        href: "#",
+      },
+      {
+        title: "Fabri Elite",
+        description: "Luxury Agency in UAE",
+        image: "/assets/projectsPagePics/fabri.jpg",
+        tags: ["Scaling Business"],
+        href: "#",
+      },
+      {
+        title: "St. George Estate",
+        description: "Real Estate Agency in Dubai",
+        image: "/assets/projectsPagePics/st.png",
+        tags: ["Scaling Business"],
+        href: "#",
+      }
+    ]
   }
-
-  return content;
-}
+];
 
 function ProjectsCta() {
   return (
-    <section className="bg-[#080808] px-6 pb-[74px] pt-[63px] text-white sm:px-10 sm:pb-[88px] sm:pt-[70px] lg:px-12">
-      <div className="mx-auto flex max-w-[650px] flex-col items-center text-center">
-        <p className="font-[var(--font-be-vietnam)] text-[9px] font-bold uppercase leading-none tracking-[3px] text-white">
-          <span className="mr-[8px] text-[#ff5500]">•</span>FULL STACK MARKETING
-        </p>
-        <h2 className="mt-[24px] font-[var(--font-be-vietnam)] text-[36px] font-medium lowercase leading-[1.08] tracking-[-1.9px] sm:text-[48px] lg:text-[52px]">
+    <section className="relative z-10 px-6 py-[80px] text-white overflow-hidden">
+      {/* Background Glows */}
+      {/* <div className="pointer-events-none absolute left-[-15%] top-[-10%] h-[600px] w-[600px] rounded-full bg-[#ff5500] opacity-20 blur-[100px]" />
+      <div className="pointer-events-none absolute right-[-15%] bottom-[-10%] h-[600px] w-[600px] rounded-full bg-[#ff5500] opacity-20 blur-[100px]" /> */}
+
+      <div className="relative mx-auto max-w-[800px] text-center">
+        <div className="flex items-center justify-center gap-2 mb-8">
+          <div className="h-1.5 w-1.5 rounded-full bg-[#ff5500]"></div>
+          <p className="text-[9px] font-bold uppercase tracking-[3px] text-white/90">
+            FULL-STACK MARKETING
+          </p>
+        </div>
+
+        <h2 className="mb-10 text-[42px] font-medium leading-[1.05] tracking-[-1.5px] sm:text-[60px]">
           we are your{" "}
-          <span className="font-[var(--font-cormorant)] text-[1.18em] font-extralight timesFontFamily italic tracking-[-0.04em]">
-            360°
-            <br />
+          <span className="font-[var(--font-cormorant)] text-[1.1em] font-light timesFontFamily italic">
+            360&deg;
+          </span>
+          <br />
+          <span className="font-[var(--font-cormorant)] text-[1.1em] font-light timesFontFamily italic">
             marketing agency
           </span>
         </h2>
-        <p className="mt-[34px] max-w-[560px] font-[var(--font-inter)] text-[12px] font-normal leading-[1.75] tracking-[-0.1px] text-white/88">
-          Calling ourselves a data-driven, problem solving, people connecting, digital
-          crazy, talent engaging creative agency is too long winded... so we call
-          ourselves USS.
-        </p>
-        <p className="mt-[28px] font-[var(--font-inter)] text-[12px] font-normal leading-[1.7] text-white/88">
-          We bring all digital platforms to one connected system designed to scale.
-        </p>
-        <div className="mt-[29px] flex w-full max-w-[512px] flex-col items-center justify-center gap-[14px] sm:flex-row">
-          <Link
-            className="inline-flex h-[40px] w-full items-center justify-center rounded-full bg-[#ff5500] px-8 font-[var(--font-be-vietnam)] text-[12px] font-bold leading-none text-white transition hover:bg-[#ff6b1f] sm:w-[230px]"
-            href="/#contact"
-          >
+
+        <div className="mx-auto max-w-[600px] space-y-8 text-[12px] leading-[1.7] tracking-[1.4px] text-white/80">
+          <p>
+            Calling ourselves a data-driven, problem solving, people connecting, digital crazy,
+            talent engaging creative agency is too long winded.. so we call ourselves USS.
+          </p>
+          <p>
+            We bring all digital platforms to one connected system designed to scale.
+          </p>
+        </div>
+
+        <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <button className="h-[40px] w-full sm:w-auto px-10 rounded-full bg-[#ff5500] text-[8px] font-bold text-white transition-colors hover:bg-[#ff6b1f]">
             Book a Call
-          </Link>
-          <Link
-            className="inline-flex h-[40px] w-full items-center justify-center rounded-full border border-white px-8 font-[var(--font-be-vietnam)] text-[12px] font-bold leading-none text-white transition hover:border-[#ff5500] hover:text-[#ff5500] sm:w-[230px]"
-            href="/#services"
-          >
-            See How We Scale&nbsp;→
-          </Link>
+          </button>
+          <button className="flex h-[40px] w-full sm:w-auto px-8 items-center justify-center gap-2 rounded-full border border-white bg-transparent text-[8px] font-bold text-white transition-colors hover:bg-white/5">
+            See How We Scale
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-1 opacity-80">
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </button>
         </div>
       </div>
     </section>
@@ -227,49 +271,96 @@ function ProjectsCta() {
 
 export default function ProjectsPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-black">
       <Header />
 
-      <section className="bg-black px-6 pb-[76px] pt-[112px] text-center text-white sm:pb-[92px] sm:pt-[132px] lg:pb-[112px] lg:pt-[145px]">
+      <section className="bg-black px-6 pb-[60px] pt-[112px] text-center text-white sm:pb-[90px]">
         <div className="mx-auto max-w-[1150px]">
-          <p className="font-[var(--font-be-vietnam)] text-[9px] font-bold uppercase leading-none tracking-[3.2px] text-white">
+          <p className="font-[var(--font-be-vietnam)] text-[9px] font-normal uppercase leading-none tracking-[3.2px] text-white flex items-center justify-center">
             OUR PORTFOLIO
           </p>
-          <h1 className="mt-[25px] font-[var(--font-be-vietnam)] text-[38px] font-bold lowercase leading-[1.03] tracking-[-1.8px] text-white sm:text-[58px] sm:tracking-[-3px] lg:text-[64px]">
+          <h1 className="mt-[25px] font-[var(--font-be-vietnam)] text-[38px] font-bold lowercase leading-[1.03] tracking-[1.8px] text-white sm:text-[58px] sm:tracking-[2px]">
             projects that make an{" "}
             <span className="font-[var(--font-cormorant)] text-[1.15em] font-extralight timesFontFamily italic tracking-[-0.035em] text-[#ff5500]">
               impact
             </span>
           </h1>
-          <p className="mt-[30px] font-[var(--font-be-vietnam)] text-[14px] font-medium uppercase leading-[1.35] tracking-[-0.3px] text-white sm:text-[18px]">
+          <p className="mt-[30px] font-[var(--font-be-vietnam)] text-[12px] font-medium uppercase leading-[1.35] tracking-[0.3px] text-white sm:text-[15px]">
             TAKE A LOOK AT USS PROJECTS ACROSS UK, US AND MIDDLE EAST
           </p>
         </div>
       </section>
 
-      <section className="bg-[#f7f7f5] px-6 pb-[124px] pt-[33px] text-black sm:pb-[150px]">
-        <div className="mx-auto max-w-[1150px]">
-          <div className="flex gap-[10px] overflow-x-auto pb-[28px] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:justify-center">
-            {filters.map((filter, index) => (
-              <button
-                className={`h-[39px] shrink-0 rounded-full border px-[22px] font-[var(--font-inter)] text-[10.5px] font-normal leading-none tracking-[-0.25px] transition ${
-                  index === 0
-                    ? "border-black bg-black text-white"
-                    : "border-black bg-white text-black hover:bg-black hover:text-white"
-                }`}
-                key={filter}
-                type="button"
-              >
-                {filter}
-              </button>
-            ))}
-          </div>
+      <section className="bg-black pb-[124px] pt-[20px] text-white sm:pb-[150px] overflow-hidden">
+        <div className="flex flex-col gap-8 sm:gap-12 pl-6 sm:pl-10 lg:pl-12">
+          {categories.map((category) => (
+            <div 
+              key={category.name} 
+              className="flex gap-4 sm:gap-6 overflow-x-auto pb-4 pr-6 sm:pr-10 lg:pr-12 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden snap-x snap-mandatory"
+            >
+              {/* Category Card matching Project Card dimensions and layout */}
+              <div className="snap-start shrink-0 w-[260px] sm:w-[320px] aspect-[4/5] rounded-[16px] bg-[#0f0f0f] border border-white/5 relative p-6 flex flex-col justify-between">
+                {/* Top right pill */}
+                <div className="self-end bg-white/5 backdrop-blur-md border border-white/10 text-white/80 text-[10px] font-medium px-3 py-1.5 rounded-full font-[var(--font-inter)] tracking-[-0.2px] w-fit">
+                  {category.topTag}
+                </div>
+                
+                {/* Bottom text */}
+                <div>
+                  <h2 className="text-white text-[28px] sm:text-[32px] font-normal font-[var(--font-be-vietnam)] leading-[1.1] tracking-[-0.5px]">
+                    {category.name}
+                  </h2>
+                  <div className="mt-4 bg-white/5 border border-white/10 rounded-full px-4 py-2 text-white/70 text-[10px] font-medium font-[var(--font-inter)] tracking-[-0.2px] hover:bg-white/10 transition-colors cursor-pointer w-fit">
+                    {category.bottomTag}
+                  </div>
+                </div>
+              </div>
 
-          <div className="grid gap-x-[31px] gap-y-[35px] sm:grid-cols-2 lg:grid-cols-3">
-            {projects.map((project) => (
-              <ProjectCard project={project} key={project.title} />
-            ))}
-          </div>
+              {/* Project Cards */}
+              {category.projects.map((project, idx) => (
+                <Link
+                  key={`${category.name}-${idx}`}
+                  href={project.href}
+                  className="snap-start shrink-0 relative w-[260px] sm:w-[320px] aspect-[4/5] rounded-[16px] overflow-hidden group block"
+                >
+                  <Image 
+                    src={project.image} 
+                    alt={project.title} 
+                    fill 
+                    sizes="(min-width: 640px) 320px, 260px"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105" 
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-black/10 transition-opacity duration-500 group-hover:opacity-90" />
+                  
+                  {/* Top Left See More Pill */}
+                  <div className="absolute top-5 left-5 bg-white/10 backdrop-blur-md border border-white/20 text-white text-[10px] px-3 py-1.5 rounded-full flex items-center justify-center font-[var(--font-inter)] transition-colors group-hover:bg-white/20">
+                    <span className="font-medium">See More &gt;</span>
+                  </div>
+
+                  {/* Top Right Tags */}
+                  <div className="absolute top-5 right-5 flex flex-wrap gap-2 pointer-events-none">
+                    {project.tags.map(tag => (
+                      <span 
+                        key={tag} 
+                        className="bg-white/10 backdrop-blur-md border border-white/20 text-white text-[10px] font-medium px-3 py-1.5 rounded-full font-[var(--font-inter)] tracking-[-0.2px]"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  <div className="absolute bottom-5 left-5 right-5 pointer-events-none">
+                    <h3 className="text-white text-xl sm:text-[22px] font-medium font-[var(--font-be-vietnam)] tracking-[-0.5px]">
+                      {project.title}
+                    </h3>
+                    <p className="text-white/70 text-[12px] sm:text-[13px] mt-1 font-[var(--font-inter)] line-clamp-2 leading-[1.4]">
+                      {project.description}
+                    </p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          ))}
         </div>
       </section>
 
