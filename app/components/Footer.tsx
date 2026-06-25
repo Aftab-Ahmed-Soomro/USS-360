@@ -1,107 +1,399 @@
+"use client";
+
 const companyLinks = ["About USS", "Our Projects", "Our Team", "Contact", "Book a Call"];
-const socials = ["in", "ig", "fb", "tw"];
+
+const offices = [
+  {
+    country: "UAE",
+    lines: ["Flowork Offices, Business Park 4,", "Dubai Hills, United Arab Emirates"],
+  },
+  {
+    country: "USA",
+    lines: ["Office 1175, Peachtree St NE, #", "Atlanta, GA 30361, United States"],
+  },
+  {
+    country: "UK",
+    lines: ["Office 4, Green Dragon House", "London, CR0 1FS, United Kingdom"],
+  },
+];
+
+const socials = [
+  { label: "Facebook", icon: "f", href: "#" },
+  { label: "LinkedIn", icon: "in", href: "#" },
+];
 
 export function Footer() {
   return (
-    <footer className="relative z-10 border-t border-white/[0.05] bg-[#0a0a0a] px-6 pb-[24px] pt-[46px] text-white ">
-      <div className="mx-auto flex max-w-[1150px] flex-col gap-[82px]">
-        <div className="grid gap-10 md:grid-cols-[minmax(0,380px)_180px_minmax(0,260px)] md:justify-between lg:gap-14">
-          <div className="flex max-w-[410px] flex-col">
-            <h2 className="font-[var(--font-be-vietnam)] text-[34px] font-bold leading-none tracking-[1.2px]">
-              USS
-            </h2>
+    <>
+      <style>{`
+        .uss-footer {
+          background-color: #000;
+          color: #ffffff;
+          padding: 56px 48px 28px 48px;
+          font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+          box-sizing: border-box;
+        }
 
-            <p className="mt-[13px] max-w-[400px] font-[var(--font-inter)] text-[11px] font-normal leading-[2.35] text-white">
-              Built to Scale. Designed to Convert.
-              <br />
-              Helping brands across US, UK and the Middle East grow through strategy,
-              <br className="hidden sm:block" />
-              creative, and performance marketing.
+        .uss-footer-inner {
+          max-width: 1150px;
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+          gap: 72px;
+        }
+
+        /* ── Top grid ── */
+        .uss-footer-grid {
+          display: grid;
+          grid-template-columns: minmax(0, 400px) minmax(0, 200px) minmax(0, 400px);
+          justify-content: space-between;
+          gap: 40px;
+          align-items: start;
+        }
+
+        /* ── Left column ── */
+        .uss-logo {
+          font-size: 38px;
+          font-weight: 800;
+          letter-spacing: 1px;
+          line-height: 1;
+          margin: 0 0 16px 0;
+          font-family: 'Inter', sans-serif;
+        }
+
+        .uss-email-row {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 24px;
+        }
+
+        .uss-at-icon {
+          width: 26px;
+          height: 26px;
+          // border-radius: 50%;
+          // background-color: #e04e14;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 16px;
+          font-weight: 500;
+          color: #e04e14;
+          flex-shrink: 0;
+          line-height: 1;
+        }
+
+        .uss-email-link {
+          color: #ffffff;
+          font-size: 11.5px;
+          text-decoration: none;
+          transition: color 0.2s;
+          font-weight: 400;
+        }
+
+        .uss-email-link:hover {
+          color: #e04e14;
+        }
+
+        .uss-newsletter-label {
+          font-size: 15px;
+          font-weight: 700;
+          margin: 0 0 14px 0;
+          color: #ffffff;
+          line-height: 1.3;
+        }
+
+        .uss-subscribe-form {
+          display: flex;
+          gap: 0;
+          height: 44px;
+          max-width: 390px;
+          border-radius: 999px;
+          overflow: hidden;
+          border: 1px solid rgba(255,255,255,0.12);
+          background: rgba(255,255,255,0.04);
+        }
+
+        .uss-subscribe-input {
+          flex: 1;
+          min-width: 0;
+          background: transparent;
+          border: none;
+          outline: none;
+          padding: 0 20px;
+          font-size: 12px;
+          color: #fff;
+          font-family: inherit;
+        }
+
+        .uss-subscribe-input::placeholder {
+          color: #fff;
+        }
+
+        .uss-subscribe-btn {
+          height: 44px;
+          padding: 0 28px;
+          background-color: #e04e14;
+          color: #ffffff;
+          font-size: 12px;
+          font-weight: 400;
+          border: none;
+          border-radius: 999px;
+          cursor: pointer;
+          font-family: inherit;
+          transition: background-color 0.2s;
+          white-space: nowrap;
+          flex-shrink: 0;
+          margin: -1px;
+        }
+
+        .uss-subscribe-btn:hover {
+          background-color: #ff6120;
+        }
+
+        /* ── Middle column (Company links) ── */
+        .uss-col-heading {
+          font-size: 11px;
+          font-weight: 700;
+          letter-spacing: 2.5px;
+          text-transform: uppercase;
+          color: #e04e14;
+          margin: 0 0 22px 0;
+          line-height: 1;
+        }
+
+        .uss-nav-list {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+        }
+
+        .uss-nav-list a {
+          color: rgba(255,255,255,0.9);
+          text-decoration: none;
+          font-size: 12px;
+          font-weight: 300;
+          transition: color 0.2s;
+        }
+
+        .uss-nav-list a:hover {
+          color: #e04e14;
+        }
+
+        /* ── Right column (Office locations) ── */
+        .uss-offices-list {
+          display: flex;
+          flex-direction: column;
+          gap: 22px;
+        }
+
+        .uss-office-row {
+          display: flex;
+          align-items: flex-start;
+          gap: 14px;
+        }
+
+        .uss-pin-icon {
+          width: 16px;
+          height: 16px;
+          flex-shrink: 0;
+          margin-top: 4px;
+          color: #e04e14;
+        }
+
+        .uss-office-country {
+          font-size: 12px;
+          font-weight: 500;
+          color: #ffffff;
+          min-width: 36px;
+          line-height: 1.2;
+          flex-shrink: 0;
+          margin-top: 4px;
+margin-top: 4px;
+        }
+
+        .uss-office-address {
+          font-size: 11px;
+          font-weight: 400;
+          color: rgba(255,255,255,0.65);
+          line-height: 1.75;
+        }
+
+        /* ── Bottom bar ── */
+        .uss-bottom-bar {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 16px;
+          flex-wrap: wrap;
+        }
+
+        .uss-copyright {
+          font-size: 10.5px;
+          color: #fff;
+          font-weight: 400;
+          margin: 0;
+          line-height: 1;
+        }
+
+        .uss-socials {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+        }
+
+        .uss-social-btn {
+          width: 28px;
+          height: 28px;
+          border-radius: 50%;
+          background-color: #fff;
+          border: 1px solid rgba(255,255,255,0.12);
+          color: #000;
+          font-size: 20px;
+          font-weight: 700;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none;
+          transition: border-color 0.2s, color 0.2s, background-color 0.2s;
+          font-family: inherit;
+          line-height: 1;
+        }
+
+        .uss-social-btn:hover {
+          background-color: #2a2a2a;
+          border-color: rgba(255,255,255,0.3);
+          color: #e04e14;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 900px) {
+          .uss-footer-grid {
+            grid-template-columns: 1fr 1fr;
+          }
+          .uss-footer-left {
+            grid-column: 1 / -1;
+          }
+        }
+
+        @media (max-width: 580px) {
+          .uss-footer {
+            padding: 48px 20px 24px 20px;
+          }
+          .uss-footer-grid {
+            grid-template-columns: 1fr;
+          }
+          .uss-footer-left {
+            grid-column: auto;
+          }
+        }
+      `}</style>
+
+      <footer className="uss-footer">
+        <div className="uss-footer-inner">
+
+          {/* ── Top section ── */}
+          <div className="uss-footer-grid">
+
+            {/* Left: Logo + email + newsletter */}
+            <div className="uss-footer-left">
+              <h2 className="uss-logo">USS</h2>
+
+              <div className="uss-email-row">
+                <span className="uss-at-icon">@</span>
+                <a href="mailto:contact@unitedstrategicsolutions.com" className="uss-email-link">
+                  contact@unitedstrategicsolutions.com
+                </a>
+              </div>
+
+              <p className="uss-newsletter-label">Subscribe to our newsletter</p>
+
+              <div className="uss-subscribe-form">
+                <label htmlFor="footer-email" className="sr-only">Your email</label>
+                <input
+                  id="footer-email"
+                  type="email"
+                  placeholder="Your email"
+                  className="uss-subscribe-input"
+                />
+                <button type="submit" className="uss-subscribe-btn">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+
+            {/* Middle: Company links */}
+            <nav aria-label="Footer company navigation">
+              <h3 className="uss-col-heading">Company</h3>
+              <ul className="uss-nav-list">
+                {companyLinks.map((link) => (
+                  <li key={link}>
+                    <a href="#">{link}</a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+
+            {/* Right: Office locations */}
+            <div>
+              <h3 className="uss-col-heading">Location</h3>
+              <div className="uss-offices-list">
+                {offices.map((office) => (
+                  <div key={office.country} className="uss-office-row">
+                    {/* Pin icon */}
+                    <svg
+                      className="uss-pin-icon"
+                      viewBox="0 0 16 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8 0C4.686 0 2 2.686 2 6c0 4.5 6 14 6 14s6-9.5 6-14c0-3.314-2.686-6-6-6Zm0 8.5A2.5 2.5 0 1 1 8 3.5a2.5 2.5 0 0 1 0 5Z"
+                        fill="#e04e14"
+                      />
+                    </svg>
+
+                    <span className="uss-office-country">{office.country}</span>
+
+                    <span className="uss-office-address">
+                      {office.lines.map((line, i) => (
+                        <span key={i}>
+                          {line}
+                          {i < office.lines.length - 1 && <br />}
+                        </span>
+                      ))}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* ── Bottom bar ── */}
+          <div className="uss-bottom-bar">
+            <p className="uss-copyright">
+              © 2025 United Strategic Solutions. All rights reserved.
             </p>
 
-            <form className="mt-[14px] flex w-full max-w-[382px] flex-col gap-3 sm:h-[34px] sm:flex-row">
-              <label className="sr-only" htmlFor="footer-email">
-                Your email
-              </label>
-              <input
-                id="footer-email"
-                className="h-[34px] min-w-0 flex-1 rounded-full border border-white/10 bg-white/[0.05] px-[18px] font-[var(--font-be-vietnam)] text-[11px] font-normal leading-none text-white outline-none placeholder:text-white focus:border-white/25"
-                placeholder="Your email"
-                type="email"
-              />
-              <button
-                className="h-[34px] w-[106px] rounded-full bg-[#ff5500] px-4 font-[var(--font-be-vietnam)] text-[11px] font-medium leading-none text-white transition hover:bg-[#ff6b1f]"
-                type="submit"
-              >
-                Subscribe
-              </button>
-            </form>
-          </div>
-
-          <nav className="flex flex-col gap-[18px]" aria-label="Footer company navigation">
-            <h3 className="font-[var(--font-be-vietnam)] text-[11px] font-bold leading-none tracking-[2px]">
-              Company
-            </h3>
-            <ul className="flex flex-col gap-[10px]">
-              {companyLinks.map((link) => (
-                <li key={link}>
-                  <a
-                    className="font-[var(--font-inter)] text-[11px] font-normal leading-none text-white transition hover:text-[#ff5500]"
-                    href="#"
-                  >
-                    {link}
-                  </a>
-                </li>
+            <div className="uss-socials">
+              {socials.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  className="uss-social-btn"
+                  aria-label={s.label}
+                >
+                  {s.icon}
+                </a>
               ))}
-            </ul>
-          </nav>
-
-          <div className="flex flex-col">
-            <h3 className="font-[var(--font-be-vietnam)] text-[11px] font-bold leading-none tracking-[2px]">
-              Contact
-            </h3>
-            <address className="mt-[24px] flex flex-col gap-[24px] not-italic">
-              <span className="font-[var(--font-inter)] text-[11px] font-normal leading-none text-white">
-                United Strategic Solutions
-              </span>
-              <span className="font-[var(--font-inter)] text-[11px] font-normal leading-none text-white">
-                US - UK - UAE
-              </span>
-              <a
-                className="font-[var(--font-inter)] text-[11px] font-normal leading-none text-white transition hover:text-[#ff5500]"
-                href="mailto:hello@uss.agency"
-              >
-                hello@uss.agency
-              </a>
-            </address>
-
-            <a
-              className="mt-[38px] inline-flex h-[28px] w-[195px] items-center justify-center rounded-full bg-[#ff5500] px-[18px] font-[var(--font-inter)] text-[11px] font-bold leading-none tracking-[0.4px] text-white transition hover:bg-[#ff6b1f]"
-              href="#contact"
-            >
-              Book a Strategy Call <span className="ml-[6px]">-&gt;</span>
-            </a>
+            </div>
           </div>
-        </div>
 
-        <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
-          <p className="font-[var(--font-inter)] text-[10px] font-normal leading-none text-white">
-            &copy; 2025 United Strategic Solutions. All rights reserved.
-          </p>
-
-          <div className="flex items-center gap-[11px]">
-            {socials.map((social) => (
-              <a
-                className="grid size-[27px] place-items-center rounded-full border border-white/10 font-[var(--font-inter)] text-[9px] font-bold leading-none text-white transition hover:border-white/30 hover:text-[#ff5500]"
-                href="#"
-                key={social}
-              >
-                {social}
-              </a>
-            ))}
-          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </>
   );
 }

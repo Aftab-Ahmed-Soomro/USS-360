@@ -1,9 +1,15 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { Button } from "./common/Button";
 
-const navItems = ["About", "Solutions", "Projects", "Contact"];
+const navItems = [
+  { label: "About", href: "/about" },
+  { label: "Solutions", href: "/#solutions" },
+  { label: "Projects", href: "/projects" },
+  { label: "Contact", href: "/contact" },
+];
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,9 +18,11 @@ export function Header() {
     <div className="bg-black">
       <header className="relative z-10 mx-auto flex w-full max-w-[1150px] flex-col px-6 py-4 md:min-h-[72px] md:flex-row md:items-center md:justify-between md:gap-8 md:py-0 ">
         <div className="flex w-full items-center justify-between gap-3 md:order-2 md:w-auto md:shrink-0">
-          <Button className="h-[40px] max-w-[calc(100vw-96px)] shrink-0 px-4 text-[13px] font-bold min-[360px]:px-5 sm:h-[42px] sm:px-[27px] sm:text-[16px]">
-            Book a Consultation
-          </Button>
+          <Link href="/contact" passHref>
+            <Button className="h-[40px] cursor-pointer max-w-[calc(100vw-96px)] shrink-0 px-4 text-[13px] font-bold min-[360px]:px-5 sm:h-[42px] sm:px-[27px] sm:text-[16px]">
+              Book a Consultation
+            </Button>
+          </Link>
           <button
             type="button"
             aria-label={isMenuOpen ? "Close main navigation" : "Open main navigation"}
@@ -49,14 +57,14 @@ export function Header() {
           }`}
         >
           {navItems.map((item) => (
-            <a
+            <Link
               className="py-1 text-[15px] font-medium tracking-[0] text-white transition hover:text-[#ff6b1f] md:py-0 md:text-[16px]"
-              href={`#${item.toLowerCase()}`}
-              key={item}
+              href={item.href}
+              key={item.label}
               onClick={() => setIsMenuOpen(false)}
             >
-              {item}
-            </a>
+              {item.label}
+            </Link>
           ))}
         </nav>
       </header>

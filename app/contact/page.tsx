@@ -1,4 +1,6 @@
 import { Brands } from "../components/Brands";
+import WeAreGlobal from "../components/ContactGlobal";
+import ContactHero from "../components/ContactHero";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 
@@ -84,67 +86,11 @@ export default function ContactPage() {
     <main className="min-h-screen bg-white">
       <Header />
 
-      <section className="bg-black px-6 pb-[74px] pt-[80px] text-center text-white sm:px-10 sm:pb-[90px] sm:pt-[80px] lg:px-12 lg:pb-[105px]">
-        <div className="mx-auto max-w-[700px]">
-          <p className="font-[var(--font-be-vietnam)] text-[11px] font-bold uppercase leading-none tracking-[1px] text-[#ff5500]">
-            CONTACT
-          </p>
-          <h1 className="mt-[28px] font-[var(--font-be-vietnam)] text-[46px] font-bold lowercase leading-[0.95] tracking-[-1.8px] sm:text-[60px] lg:text-[64px]">
-            let&apos;s{" "}
-            <span className="font-[var(--font-cormorant)] text-[1.18em] font-extralight timesFontFamily italic tracking-[-0.045em] text-[#ff5500]">
-              talk
-            </span>
-          </h1>
-          <p className="mx-auto mt-[27px] max-w-[650px] font-[var(--font-be-vietnam)] text-[16px] font-normal leading-[1.35] tracking-[-0.2px] text-white/80 sm:text-[18px]">
-            Whether you&apos;ve got a clear plan or you&apos;re just exploring ideas,
-            we&apos;re happy to chat and see how we can help. Drop us a message and
-            we&apos;ll get back to you soon.
-          </p>
-        </div>
-      </section>
+      <ContactHero />
 
-      <section className="bg-[#f7f7f5] px-6 py-[74px] text-black sm:py-[84px] lg:py-[80px]">
-        <div className="mx-auto grid max-w-[1150px] gap-[56px] lg:grid-cols-[420px_508px] lg:justify-between">
-          <div className="pt-[5px]">
-            <p className="font-[var(--font-inter)] text-[13px] font-normal leading-none text-[#395072]">
-              Get in touch
-            </p>
-            <h2 className="mt-[25px] font-[var(--font-be-vietnam)] text-[31px] font-medium lowercase leading-[1.08] tracking-[-1.3px] sm:text-[34px]">
-              reach out directly
-            </h2>
 
-            <div className="mt-[45px] flex flex-col gap-[43px]">
-              {contactItems.map((item) => (
-                <article className="grid grid-cols-[42px_minmax(0,1fr)] gap-[19px]" key={item.eyebrow}>
-                  <div className="grid size-[42px] place-items-center rounded-full border border-[#d8dee8] bg-white font-[var(--font-inter)] text-[17px] leading-none text-black">
-                    {item.icon}
-                  </div>
-                  <div>
-                    <p className="font-[var(--font-inter)] text-[10px] font-normal uppercase leading-none tracking-[2px] text-[#687897]">
-                      {item.eyebrow}
-                    </p>
-                    <h3 className="mt-[15px] font-[var(--font-be-vietnam)] text-[16px] font-normal leading-none tracking-[-0.15px] text-black">
-                      {item.title}
-                    </h3>
-                    <div className="mt-[12px] space-y-[4px]">
-                      {item.lines.map((line) => (
-                        <p
-                          className="font-[var(--font-inter)] text-[14px] font-normal leading-[1.35] tracking-[-0.15px] text-[#546b8e]"
-                          key={line}
-                        >
-                          {line}
-                        </p>
-                      ))}
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
 
-          <ContactForm />
-        </div>
-      </section>
+      <WeAreGlobal />
 
       <div className="bg-[#080808]">
         <Brands />

@@ -41,7 +41,7 @@ const teamMembers = [
 export function Team() {
   return (
     <section className="relative z-10 bg-[#0a0a0a] px-6 text-white overflow-hidden">
-      <div className="mx-auto flex max-w-[1150px] flex-col items-center gap-8 py-[82px]">
+      <div className="mx-auto flex max-w-[1150px] flex-col items-center gap-8 pt-[82px]">
         <h2 className="w-full px-0 font-[var(--font-be-vietnam)] text-[38px] font-medium leading-[1.12] tracking-[-2px] sm:text-[50px] sm:leading-[68px] sm:tracking-[-3px]">
           USS{" "}
           <span className="font-serif text-[1.08em] font-extralight timesFontFamily italic tracking-[-1px]">
@@ -60,7 +60,7 @@ export function Team() {
               >
                 {/* Image - fixed width pinned to left, doesn't stretch/zoom on hover */}
                 <div className="absolute inset-0 z-0 h-full w-full overflow-hidden border border-black">
-                  <div className="absolute top-0 left-0 h-full w-[200px] sm:w-[240px] lg:w-[280px] -translate-x-13">
+                  <div className="absolute top-0 left-0 h-full w-[200px] sm:w-[240px] lg:w-[280px] -translate-x-17">
                     <Image
                       src={member.image}
                       alt={member.role}

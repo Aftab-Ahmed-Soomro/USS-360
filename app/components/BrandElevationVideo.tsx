@@ -3,7 +3,7 @@ import { Play } from "lucide-react";
 
 export default function BrandElevationVideo() {
   return (
-    <section className="relative w-full h-[70vh] md:h-[85vh] min-h-[700px] flex flex-col items-center justify-center overflow-hidden">
+    <section className="relative w-full h-[70vh] md:h-[85vh] min-h-[665px] flex flex-col items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
