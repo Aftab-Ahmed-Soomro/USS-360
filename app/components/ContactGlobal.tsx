@@ -1,11 +1,15 @@
 "use client";
 
+import FadeLeft from "./FadeLeft";
+import FadeDown from "./FadeDown";
+import FadeUp from "./FadeUp";
+import FadeRight from "./FadeRight";
+
 const regions = [
   {
     name: "United States",
     description:
       "Supporting growth-focused businesses through strategy, creative, and performance marketing.",
-    // Replace the src below with your actual image path, e.g. "/images/us.jpg"
     image: "/assets/Global/global1.jpg",
     alt: "United States skyline at sunset",
   },
@@ -13,7 +17,6 @@ const regions = [
     name: "United Kingdom",
     description:
       "Helping brands scale through structured marketing systems and execution.",
-    // Replace the src below with your actual image path, e.g. "/images/uk.jpg"
     image: "/assets/Global/global2.jpg",
     alt: "United Kingdom skyline at night",
   },
@@ -21,7 +24,6 @@ const regions = [
     name: "United Arab Emirates",
     description:
       "Partnering with ambitious companies looking to accelerate growth and market presence.",
-    // Replace the src below with your actual image path, e.g. "/images/uae.jpg"
     image: "/assets/Global/global3.jpg",
     alt: "UAE skyline at dusk",
   },
@@ -147,37 +149,65 @@ export default function WeAreGlobal() {
       `}</style>
 
       <section className="wag-section">
-        {/* Title */}
-        <h1 className="wag-heading">
-          we are <em>global</em>
-        </h1>
 
-        {/* Subtitle */}
-        <p className="wag-subtitle">
-          Serving ambitious brands across the United States, United Kingdom,
-          <br />
-          and United Arab Emirates.
-        </p>
+        {/* Heading — drops down */}
+        <FadeDown delay={0.1}>
+          <h1 className="wag-heading">
+            we are <em>global</em>
+          </h1>
+        </FadeDown>
 
-        {/* Cards */}
+        {/* Subtitle — rises up after heading */}
+        <FadeUp delay={0.2}>
+          <p className="wag-subtitle">
+            Serving ambitious brands across the United States, United Kingdom,
+            <br />
+            and United Arab Emirates.
+          </p>
+        </FadeUp>
+
+        {/* Cards grid — each card uses a different direction, left→up→right */}
         <div className="wag-grid">
-          {regions.map((region) => (
-            <div key={region.name} className="wag-card">
+
+          {/* Card 1 (US) — slides in from left */}
+          <FadeLeft delay={0.3}>
+            <div className="wag-card">
               <div className="wag-image-wrapper">
-                {/*
-                  Replace `region.image` with your actual image source.
-                  If using Next.js <Image>, swap the <img> tag below:
-                  <Image src={region.image} alt={region.alt} fill style={{ objectFit: 'cover' }} />
-                  (and make the wrapper position: relative)
-                */}
-                <img src={region.image} alt={region.alt} />
+                <img src={regions[0].image} alt={regions[0].alt} />
               </div>
               <div className="wag-card-body">
-                <h2 className="wag-card-title">{region.name}</h2>
-                <p className="wag-card-desc">{region.description}</p>
+                <h2 className="wag-card-title">{regions[0].name}</h2>
+                <p className="wag-card-desc">{regions[0].description}</p>
               </div>
             </div>
-          ))}
+          </FadeLeft>
+
+          {/* Card 2 (UK) — rises up from below, center anchor */}
+          <FadeUp delay={0.4}>
+            <div className="wag-card">
+              <div className="wag-image-wrapper">
+                <img src={regions[1].image} alt={regions[1].alt} />
+              </div>
+              <div className="wag-card-body">
+                <h2 className="wag-card-title">{regions[1].name}</h2>
+                <p className="wag-card-desc">{regions[1].description}</p>
+              </div>
+            </div>
+          </FadeUp>
+
+          {/* Card 3 (UAE) — slides in from right */}
+          <FadeRight delay={0.3}>
+            <div className="wag-card">
+              <div className="wag-image-wrapper">
+                <img src={regions[2].image} alt={regions[2].alt} />
+              </div>
+              <div className="wag-card-body">
+                <h2 className="wag-card-title">{regions[2].name}</h2>
+                <p className="wag-card-desc">{regions[2].description}</p>
+              </div>
+            </div>
+          </FadeRight>
+
         </div>
       </section>
     </>
