@@ -10,6 +10,9 @@ import { Button } from "./components/common/Button";
 import { HomeHero } from "./components/HomeHero";
 import { MarketingSystems } from "./components/MarketingSystems";
 import { GoodCompanyMap } from "./components/GoodCompanyMap";
+import FadeDown from "./components/FadeDown";
+import FadeUp from "./components/FadeUp";
+import FadeLeft from "./components/FadeLeft";
 
 const failPoints = [
   "No clear customer journey.",
@@ -62,80 +65,99 @@ function Strategic() {
   return (
     <section className="bg-[#f7f7f6] px-6 pb-[50px] pt-[80px] text-black lg:pt-[81px]">
       <div className="mx-auto max-w-[1150px]">
+
+        {/* Section label — drops in from above */}
         <div className="text-center">
-          <p className="text-[10px] font-bold uppercase leading-none tracking-[7px] text-[#ff5500]">
-            OUR APPROACH
-          </p>
-          <h2 className="mt-[35px] text-[42px] font-normal leading-[0.98] tracking-[-1.5px] sm:text-[55px]">
-            a strategic process.
-            <span className="mt-[13px] block font-[var(--font-cormorant)] text-[51px] font-extralight timesFontFamily italic leading-[0.8] tracking-[-0.8px] text-[#ff5500] sm:text-[62px]">
-              built for growth.
-            </span>
-          </h2>
-          <p className="mx-auto mt-[37px] max-w-[400px] text-[17px] leading-[1.6]">
-            We combine insight, strategy, and execution to create measurable growth that
-            lasts.
-          </p>
+          <FadeDown>
+            <p className="text-[10px] font-bold uppercase leading-none tracking-[7px] text-[#ff5500]">
+              OUR APPROACH
+            </p>
+          </FadeDown>
+
+          {/* Headline — fades up with slight delay */}
+          <FadeUp delay={0.1}>
+            <h2 className="mt-[35px] text-[42px] font-normal leading-[0.98] tracking-[-1.5px] sm:text-[55px]">
+              a strategic process.
+              <span className="mt-[13px] block font-[var(--font-cormorant)] text-[51px] font-extralight timesFontFamily italic leading-[0.8] tracking-[-0.8px] text-[#ff5500] sm:text-[62px]">
+                built for growth.
+              </span>
+            </h2>
+          </FadeUp>
+
+          {/* Supporting copy */}
+          <FadeUp delay={0.2}>
+            <p className="mx-auto mt-[37px] max-w-[400px] text-[17px] leading-[1.6]">
+              We combine insight, strategy, and execution to create measurable growth that
+              lasts.
+            </p>
+          </FadeUp>
         </div>
 
+        {/* Process steps — each card slides in from left, staggered */}
         <div className="mt-[93px] grid gap-y-12 md:grid-cols-3 md:gap-y-0">
           {process.map((step, index) => (
-            <article
-              className={`relative px-0 md:min-h-[355px] md:px-[38px] ${index > 0 ? "md:border-l md:border-black/10" : ""
+            <FadeLeft key={step.number} delay={index * 0.15}>
+              <article
+                className={`relative px-0 md:min-h-[355px] md:px-[38px] ${
+                  index > 0 ? "md:border-l md:border-black/10" : ""
                 }`}
-              key={step.number}
-            >
-              <div className="flex items-start justify-between gap-6">
-                <span className="font-[var(--font-cormorant)] text-[118px] font-medium leading-[0.72] timesFontFamily tracking-[-4px]">
-                  {step.number}
-                </span>
-                {step.icon && (
-                  <span className="grid border border-black size-[50px] shrink-0 place-items-center rounded-full bg-white text-[22px] font-normal text-[#ff5500] shadow-[0_18px_32px_rgba(0,0,0,0.08)]">
-                    <img className="size-[30px]" src={step.icon} alt="" />
+              >
+                <div className="flex items-start justify-between gap-6">
+                  <span className="font-[var(--font-cormorant)] text-[118px] font-medium leading-[0.72] timesFontFamily tracking-[-4px]">
+                    {step.number}
                   </span>
-                )}
-              </div>
-              <div className="mt-[48px] h-px w-9 bg-[#ff5500]" />
-              <h3 className="mt-[33px] text-[24px] font-bold leading-none tracking-[-0.3px]">
-                {step.title}
-              </h3>
-              <p className="mt-[30px] max-w-[280px] text-[14px] font-normal leading-[1.7] text-black/70">
-                {step.copy}
-              </p>
-            </article>
+                  {step.icon && (
+                    <span className="grid border border-black size-[50px] shrink-0 place-items-center rounded-full bg-white text-[22px] font-normal text-[#ff5500] shadow-[0_18px_32px_rgba(0,0,0,0.08)]">
+                      <img className="size-[30px]" src={step.icon} alt="" />
+                    </span>
+                  )}
+                </div>
+                <div className="mt-[48px] h-px w-9 bg-[#ff5500]" />
+                <h3 className="mt-[33px] text-[24px] font-bold leading-none tracking-[-0.3px]">
+                  {step.title}
+                </h3>
+                <p className="mt-[30px] max-w-[280px] text-[14px] font-normal leading-[1.7] text-black/70">
+                  {step.copy}
+                </p>
+              </article>
+            </FadeLeft>
           ))}
         </div>
 
-        <div className="mx-auto mt-[50px] grid max-w-[800px] overflow-hidden rounded-[16px] border border-black/[0.03] bg-white shadow-[0_22px_42px_rgba(0,0,0,0.08)] md:min-h-[110px] md:grid-cols-[452px_1fr]">
-          <div className="flex items-center gap-[21px] px-8 py-7 md:px-[38px]">
-            <span className="grid size-[46px] shrink-0 place-items-center border border-gray-200 p-3.5 rounded-full text-[22px] font-normal text-white shadow-[0_8px_16px_rgba(0,0,0,0.08)]">
-              <img src="/assets/star.png" alt="" />
-            </span>
-            <div>
-              <h3 className="text-[14px] font-bold leading-none tracking-[-0.2px]">
-                More Than a Process. A Partnership.
-              </h3>
-              <p className="mt-[11px] max-w-[350px] text-[11.5px] leading-[1.55] text-black/60">
-                We don&apos;t just follow a process &ndash; we partner with you at every
-                stage to drive sustainable, long-term growth.
-              </p>
+        {/* Partnership card — rises up from below */}
+        <FadeUp delay={0.3}>
+          <div className="mx-auto mt-[50px] grid max-w-[800px] overflow-hidden rounded-[16px] border border-black/[0.03] bg-white shadow-[0_22px_42px_rgba(0,0,0,0.08)] md:min-h-[110px] md:grid-cols-[452px_1fr]">
+            <div className="flex items-center gap-[21px] px-8 py-7 md:px-[38px]">
+              <span className="grid size-[46px] shrink-0 place-items-center border border-gray-200 p-3.5 rounded-full text-[22px] font-normal text-white shadow-[0_8px_16px_rgba(0,0,0,0.08)]">
+                <img src="/assets/star.png" alt="" />
+              </span>
+              <div>
+                <h3 className="text-[14px] font-bold leading-none tracking-[-0.2px]">
+                  More Than a Process. A Partnership.
+                </h3>
+                <p className="mt-[11px] max-w-[350px] text-[11.5px] leading-[1.55] text-black/60">
+                  We don&apos;t just follow a process &ndash; we partner with you at every
+                  stage to drive sustainable, long-term growth.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center border-t border-black/[0.06] px-8 py-7 md:border-l md:border-t-0 md:px-[31px]">
+              <a
+                href="#contact"
+                className="inline-flex h-11 w-full max-w-[300px] items-center justify-center rounded-full bg-[#ff5500] px-6 text-[7.5px] font-medium uppercase tracking-[2px] text-white transition hover:bg-[#ff6b1f]"
+              >
+                Let&apos;s Build Your Growth Story
+                <span className="ml-[14px] text-[14px] leading-none">
+                  <img className="size-[16px]" src="/assets/smallRightArrow.png" alt="" />
+                </span>
+              </a>
             </div>
           </div>
-          <div className="flex items-center border-t border-black/[0.06] px-8 py-7 md:border-l md:border-t-0 md:px-[31px]">
-            <a
-              href="#contact"
-              className="inline-flex h-11 w-full max-w-[300px] items-center justify-center rounded-full bg-[#ff5500] px-6 text-[7.5px] font-medium uppercase tracking-[2px] text-white transition hover:bg-[#ff6b1f]"
-            >
-              Let&apos;s Build Your Growth Story
-              <span className="ml-[14px] text-[14px] leading-none">
-                <img className="size-[16px]" src="/assets/smallRightArrow.png" alt="" />
-              </span>
-            </a>
-          </div>
-        </div>
+        </FadeUp>
+
       </div>
     </section>
-  )
+  );
 }
 
 function FinalCta() {
@@ -146,46 +168,60 @@ function FinalCta() {
       <div className="pointer-events-none absolute right-[-15%] bottom-[-10%] h-[600px] w-[600px] rounded-full bg-[#ff5500] opacity-20 blur-[100px]" />
 
       <div className="relative mx-auto max-w-[800px] text-center">
-        <div className="flex items-center justify-center gap-2 mb-8">
-          <div className="h-1.5 w-1.5 rounded-full bg-[#ff5500]"></div>
-          <p className="text-[9px] font-bold uppercase tracking-[3px] text-white/90">
-            FULL-STACK MARKETING
-          </p>
-        </div>
 
-        <h2 className="mb-10 text-[42px] font-medium leading-[1.05] tracking-[-1.5px] sm:text-[60px]">
-          we are your{" "}
-          <span className="font-[var(--font-cormorant)] text-[1.1em] font-light timesFontFamily italic">
-            360&deg;
-          </span>
-          <br />
-          <span className="font-[var(--font-cormorant)] text-[1.1em] font-light timesFontFamily italic">
-            marketing agency
-          </span>
-        </h2>
+        {/* Eyebrow — drops down */}
+        <FadeDown>
+          <div className="flex items-center justify-center gap-2 mb-8">
+            <div className="h-1.5 w-1.5 rounded-full bg-[#ff5500]"></div>
+            <p className="text-[9px] font-bold uppercase tracking-[3px] text-white/90">
+              FULL-STACK MARKETING
+            </p>
+          </div>
+        </FadeDown>
 
-        <div className="mx-auto max-w-[600px] space-y-8 text-[12px] leading-[1.7] tracking-[1.4px] text-white/80">
-          <p>
-            Calling ourselves a data-driven, problem solving, people connecting, digital crazy,
-            talent engaging creative agency is too long winded.. so we call ourselves USS.
-          </p>
-          <p>
-            We bring all digital platforms to one connected system designed to scale.
-          </p>
-        </div>
+        {/* Main headline — fades up */}
+        <FadeUp delay={0.1}>
+          <h2 className="mb-10 text-[42px] font-medium leading-[1.05] tracking-[-1.5px] sm:text-[60px]">
+            we are your{" "}
+            <span className="font-[var(--font-cormorant)] text-[1.1em] font-light timesFontFamily italic">
+              360&deg;
+            </span>
+            <br />
+            <span className="font-[var(--font-cormorant)] text-[1.1em] font-light timesFontFamily italic">
+              marketing agency
+            </span>
+          </h2>
+        </FadeUp>
 
-        <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <button className="h-[40px] w-full sm:w-auto px-10 rounded-full bg-[#ff5500] text-[8px] font-bold text-white transition-colors hover:bg-[#ff6b1f]">
-            Book a Call
-          </button>
-          <button className="flex h-[40px] w-full sm:w-auto px-8 items-center justify-center gap-2 rounded-full border border-white bg-transparent text-[8px] font-bold text-white transition-colors hover:bg-white/5">
-            See How We Scale
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-1 opacity-80">
-              <path d="M5 12h14"></path>
-              <path d="m12 5 7 7-7 7"></path>
-            </svg>
-          </button>
-        </div>
+        {/* Body copy paragraphs — left then right for visual rhythm */}
+        <FadeLeft delay={0.2}>
+          <div className="mx-auto max-w-[600px] space-y-8 text-[12px] leading-[1.7] tracking-[1.4px] text-white/80">
+            <p>
+              Calling ourselves a data-driven, problem solving, people connecting, digital crazy,
+              talent engaging creative agency is too long winded.. so we call ourselves USS.
+            </p>
+            <p>
+              We bring all digital platforms to one connected system designed to scale.
+            </p>
+          </div>
+        </FadeLeft>
+
+        {/* CTA buttons — rise up last */}
+        <FadeUp delay={0.35}>
+          <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <button className="h-[40px] w-full sm:w-auto px-10 rounded-full bg-[#ff5500] text-[8px] font-bold text-white transition-colors hover:bg-[#ff6b1f]">
+              Book a Call
+            </button>
+            <button className="flex h-[40px] w-full sm:w-auto px-8 items-center justify-center gap-2 rounded-full border border-white bg-transparent text-[8px] font-bold text-white transition-colors hover:bg-white/5">
+              See How We Scale
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-1 opacity-80">
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </button>
+          </div>
+        </FadeUp>
+
       </div>
     </section>
   );

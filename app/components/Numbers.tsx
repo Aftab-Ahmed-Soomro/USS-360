@@ -1,5 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import FadeLeft from "./FadeLeft";
+import FadeUp from "./FadeUp";
+import FadeRight from "./FadeRight";
 
 type NumberStat = {
   value: string;
@@ -41,7 +44,7 @@ export function Numbers({
   const titleLines = title.split("\n");
 
   return (
-    <section className="relative z-10 overflow-hidden bg-black px-6 py-[58px] text-white  lg:py-[67px]">
+    <section className="relative z-10 overflow-hidden bg-black px-6 py-[58px] text-white lg:py-[67px]">
       <Image
         src="/assets/sections/numbers-space.jpg"
         alt=""
@@ -55,40 +58,54 @@ export function Numbers({
 
       <div className="relative mx-auto max-w-[1150px]">
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
-          <div>
-            <p className="text-[11px] font-bold uppercase tracking-[0.22em]">{eyebrow}</p>
-            <h2 className="mt-[19px] max-w-[490px] text-[38px] font-medium leading-[0.98] tracking-[-1.7px] sm:text-[48px] lg:text-[50px]">
-              {titleLines.map((line, index) => (
-                <span className="block" key={`${line}-${index}`}>
-                  {line}
-                </span>
-              ))}
-            </h2>
-          </div>
 
-          <Link
-            className="inline-flex h-[42px] w-[210px] items-center justify-center gap-[15px] rounded-full bg-white text-[11px] font-extrabold text-black transition hover:bg-white/90"
-            href={ctaHref}
-          >
-            {ctaLabel} <span className="text-[18px] leading-none">&rsaquo;</span>
-          </Link>
+          {/* Eyebrow + Title — left se slide in */}
+          <FadeLeft delay={0.1}>
+            <div>
+              <p className="text-[11px] font-bold uppercase tracking-[0.22em]">{eyebrow}</p>
+              <h2 className="mt-[19px] max-w-[490px] text-[38px] font-medium leading-[0.98] tracking-[-1.7px] sm:text-[48px] lg:text-[50px]">
+                {titleLines.map((line, index) => (
+                  <span className="block" key={`${line}-${index}`}>
+                    {line}
+                  </span>
+                ))}
+              </h2>
+            </div>
+          </FadeLeft>
+
+          {/* CTA Button — right se slide in */}
+          <FadeRight delay={0.2}>
+            <Link
+              className="inline-flex h-[42px] w-[210px] items-center justify-center gap-[15px] rounded-full bg-white text-[11px] font-extrabold text-black transition hover:bg-white/90"
+              href={ctaHref}
+            >
+              {ctaLabel} <span className="text-[18px] leading-none">&rsaquo;</span>
+            </Link>
+          </FadeRight>
+
         </div>
 
+        {/* Stats grid — har card niche se uthta hai, staggered */}
         <div className="mt-[58px] border-t border-white/12 pt-[43px]">
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-[54px]">
-            {stats.map((stat) => (
-              <div className="flex items-center gap-[16px]" key={stat.label}>
-                <Spark />
-                <div>
-                  <p className="text-[42px] font-extrabold leading-none tracking-[-1px] sm:text-[50px]">
-                    {stat.value}
-                  </p>
-                  <p className="mt-[8px] text-[11px] font-normal leading-none text-white/95">{stat.label}</p>
+            {stats.map((stat, index) => (
+              <FadeUp key={stat.label} delay={0.3 + index * 0.12}>
+                <div className="flex items-center gap-[16px]">
+                  <Spark />
+                  <div>
+                    <p className="text-[42px] font-extrabold leading-none tracking-[-1px] sm:text-[50px]">
+                      {stat.value}
+                    </p>
+                    <p className="mt-[8px] text-[11px] font-normal leading-none text-white/95">
+                      {stat.label}
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </FadeUp>
             ))}
           </div>
         </div>
+
       </div>
     </section>
   );
