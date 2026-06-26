@@ -72,7 +72,7 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
 
             {/* Product pill — drops down */}
             <FadeDown delay={0.2}>
-              <p className="mt-[59px] w-24 block rounded-full bg-[#e9e9e7] px-[12px] py-[8px] font-[var(--font-inter)] text-[10px] font-medium uppercase leading-none tracking-[0.4px] text-[#242424] lg:mt-[58px]">
+              <p className="mt-[59px] w-28 text-center block rounded-full bg-[#e9e9e7] px-[12px] py-[8px] font-[var(--font-inter)] text-[10px] font-medium uppercase leading-none tracking-[0.4px] text-[#242424] lg:mt-[58px]">
                 {project.productName}
               </p>
             </FadeDown>

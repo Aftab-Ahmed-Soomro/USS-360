@@ -1018,6 +1018,807 @@ export const projectDetails = [
         "A USS project overview for supporting Adidas Middle East with product launch event activation, content creation, and digital campaign assets.",
     },
   },
+  {
+    slug: "fete-events",
+    productName: "Fete Events",
+    title: "Elevating Luxury Events Through 360 Marketing",
+    description:
+      "Fête Events is a renowned, leading luxury event management company with over 15 years of experience delivering bespoke, extraordinary corporate events, weddings, galas, and brand activations across the globe. USS partnered with Fête Events to strengthen their digital presence, increase visibility, and support long-term business growth through a comprehensive marketing strategy.",
+    heroImage: {
+      src: "/assets/fete/Fete.png",
+      alt: "Fete Events passport and globe",
+      position: "50% 50%",
+    },
+    overviewSubtitle: "SNEAK PEAK INTO FETE LUXURY EVENTS",
+    galleryImages: [
+      {
+        src: "/assets/fete/1.png",
+        alt: "Fete Events globe and map",
+        position: "50% 50%",
+      },
+      {
+        src: "/assets/fete/2.png",
+        alt: "Fete Events passports",
+        position: "50% 50%",
+      },
+      {
+        src: "/assets/fete/3.jpg",
+        alt: "Fete Events small globe with flags",
+        position: "50% 50%",
+      },
+      {
+        src: "/assets/fete/4.jpg",
+        alt: "Fete Events packing suitcase",
+        position: "50% 50%",
+      },
+    ],
+    goal:
+      "Increase brand visibility, generate high quality enquiries, and position Fête Events as a leading luxury event management company in the UAE and internationally.",
+    workIntro: "We supported Fête Events with a full-service marketing approach:",
+    workItems: [
+      {
+        icon: "creator",
+        text: "Marketing strategy and planning",
+      },
+      {
+        icon: "360",
+        text: "Google and Meta Ads management",
+      },
+      {
+        icon: "social",
+        text: "Social media management",
+      },
+      {
+        icon: "email",
+        text: "Email marketing strategy and design",
+      },
+    ],
+    approach:
+      "Our team executed a comprehensive monthly and weekly management of the Fête Events brand, through a combination of paid media, strategic content, email marketing and ongoing social media management. We developed a marketing strategy designed to increase awareness, attract qualified leads and reinforce the brand's position within the luxury event industry.",
+    outcomes: [
+      {
+        icon: "megaphone",
+        text: "Expanded awareness across key digital channels",
+      },
+      {
+        icon: "bars",
+        text: "Generated targeted leads and high quality search enquiries for luxury event services",
+      },
+      {
+        icon: "shield",
+        text: "Created a consistent and seamless brand experience online",
+      },
+      {
+        icon: "star",
+        text: "Implemented scalable marketing systems to support future expansion",
+      },
+    ],
+    focusAreas: ["Luxury Events", "360 Marketing", "Social Media Management"],
+    videoTitle: "mall of emirates launch",
+    videoSubtitle: "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
+    videoPreview: {
+      src: "/assets/blurred.png",
+      alt: "Blurred video preview of the Fete Events campaign",
+      position: "50% 50%",
+    },
+    metadata: {
+      title: "Fete Events 360 Marketing | USS Projects",
+      description:
+        "A USS project overview for Fête Events, delivering bespoke, extraordinary corporate events through comprehensive marketing strategy and digital presence.",
+    },
+  },
+  {
+    slug: "precision-talk",
+    productName: "Precision Talk",
+    title: "Transforming Customer Calls with AI",
+    description:
+      "Precision Talk is an AI voice agent solution designed to help businesses capture more opportunities by handling customer calls instantly, 24/7. Built for businesses that rely on inbound and outbound enquiries and bookings, Precision Talk eliminates missed calls, improves response times, and delivers a consistent customer experience at scale. USS partnered with Precision Talk to launch the brand, establish its market position and drive awareness.",
+    heroImage: {
+      src: "/assets/precision/precision.png",
+      alt: "Precision Talk AI voice agent dashboard",
+      position: "50% 50%",
+    },
+    overviewSubtitle: "BUILDING THE FUTURE OF CUSTOMER COMMUNICATION",
+    galleryImages: [
+      {
+        src: "/assets/precision/1.png",
+        alt: "Precision Talk customer support AI",
+        position: "50% 50%",
+      },
+      {
+        src: "/assets/precision/2.png",
+        alt: "Precision Talk dashboard interface",
+        position: "50% 50%",
+      },
+      {
+        src: "/assets/precision/3.png",
+        alt: "Precision Talk missed call recovery",
+        position: "50% 50%",
+      },
+      {
+        src: "/assets/precision/4.png",
+        alt: "Precision Talk automated booking system",
+        position: "50% 50%",
+      },
+    ],
+    goal:
+      "Position Precision Talk as a leading AI voice agent solution while educating businesses on the revenue opportunities lost through missed calls and inefficient customer handling.",
+    workIntro: "We supported Precision Talk with a full-service marketing approach:",
+    workItems: [
+      {
+        icon: "creator",
+        text: "Branding and visual identity",
+      },
+      {
+        icon: "360",
+        text: "Website design and development",
+      },
+      {
+        icon: "email",
+        text: "Paid media campaigns",
+      },
+      {
+        icon: "social",
+        text: "Social media management",
+      },
+    ],
+    approach:
+      "Our focus was on highlighting a real pain point for businesses across hospitality, real estate, automotive, and service industries: missed calls leading to missed revenue. By combining educational content, strategic messaging, and performance-driven campaigns.",
+    outcomes: [
+      {
+        icon: "megaphone",
+        text: "Introduced a new brand into the UAE market",
+      },
+      {
+        icon: "bars",
+        text: "Built a scalable foundation for expansion",
+      },
+      {
+        icon: "shield",
+        text: "Established a professional online presence",
+      },
+      {
+        icon: "star",
+        text: "Generated key performance benchmarks",
+      },
+    ],
+    focusAreas: ["New Product Launch", "360 Marketing", "Content Creation"],
+    videoTitle: "mall of emirates launch",
+    videoSubtitle: "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
+    videoPreview: {
+      src: "/assets/blurred.png",
+      alt: "Blurred video preview of the Precision Talk campaign",
+      position: "50% 50%",
+    },
+    metadata: {
+      title: "Precision Talk AI Voice Agent | USS Projects",
+      description:
+        "A USS project overview for Precision Talk, an AI voice agent solution designed to help businesses handle customer calls instantly, 24/7.",
+    },
+  },
+  {
+    slug: "disturbed-innovations",
+    productName: "Disturbed Innovations Group",
+    title: "Disturbed Innovations Group Rebrand",
+    description:
+      "Disturbed Innovations Group (DIG) is an unprecedented innovation company creating immersive brand experiences, technology activations, and large-scale events across the region. As the business evolved from Disturbed Media Group into DIG, USS partnered with the team to support their rebrand through a new website, sales materials, social media management and a renewed brand presence across key touchpoints.",
+    heroImage: {
+      src: "/assets/disturbed-innovations/disturbed.png",
+      alt: "Disturbed Innovations Group event production and brand experience",
+      position: "50% 50%",
+    },
+    overviewSubtitle: "DIG DIGITAL TRANSFORMATION",
+    galleryImages: [
+      {
+        src: "/assets/disturbed-innovations/1.png",
+        alt: "Disturbed Innovations immersive brand experience",
+        position: "50% 50%",
+      },
+      {
+        src: "/assets/disturbed-innovations/2.jpg",
+        alt: "Disturbed Innovations technology activation",
+        position: "50% 50%",
+      },
+      {
+        src: "/assets/disturbed-innovations/3.jpg",
+        alt: "Disturbed Innovations event production",
+        position: "50% 50%",
+      },
+      {
+        src: "/assets/disturbed-innovations/4.jpg",
+        alt: "Disturbed Innovations large scale event",
+        position: "50% 50%",
+      },
+    ],
+    goal:
+      "Create a modern brand presence that accurately reflects DIG's evolution while providing the tools needed to support future growth and business development.",
+    workIntro: "We supported DIG through a complete brand evolution project:",
+    workItems: [
+      {
+        icon: "360",
+        text: "Website design and development",
+      },
+      {
+        icon: "creator",
+        text: "Brand positioning and messaging",
+      },
+      {
+        icon: "email",
+        text: "Sales deck creation",
+      },
+      {
+        icon: "social",
+        text: "Social media management",
+      },
+    ],
+    approach:
+      "Our focus was on creating consistency across every touchpoint. From the website and sales materials to social media and all visual branding, we helped align DIG's visual identity with its position as a forward-thinking, unprecedented innovation company.",
+    outcomes: [
+      {
+        icon: "megaphone",
+        text: "Modern identity that reflects the evolution from DMG to DIG",
+      },
+      {
+        icon: "bars",
+        text: "Designed and launched a website aligned with the company's new positioning",
+      },
+      {
+        icon: "shield",
+        text: "Developed sales materials to support business development and client presentations",
+      },
+      {
+        icon: "star",
+        text: "Improved brand consistency across digital, physical, and marketing touchpoints",
+      },
+    ],
+    focusAreas: ["Brand Transformation", "Website Creation", "Social Media Management"],
+    videoTitle: "mall of emirates launch",
+    videoSubtitle: "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
+    videoPreview: {
+      src: "/assets/blurred.png",
+      alt: "Blurred video preview of the Disturbed Innovations campaign",
+      position: "50% 50%",
+    },
+    metadata: {
+      title: "Disturbed Innovations Group Rebrand | USS Projects",
+      description:
+        "A USS project overview for the Disturbed Innovations Group rebrand, covering website design, brand positioning, and sales material creation.",
+    },
+  },
+  {
+    slug: "afro-maya",
+    productName: "Afro Maya",
+    title: "Driving Growth for an E-Commerce Fashion Brand",
+    description:
+      "Afro Maya is a fashion and lifestyle brand dedicated to creating contemporary pieces inspired by culture, individuality and self expression. USS partnered with Afro Maya to strengthen its online presence through a combination of website development, content creation, social media management and email marketing, helping the brand create a seamless e-commerce experience across every digital touchpoint.",
+    heroImage: {
+      src: "/assets/afro/afro.jpg",
+      alt: "Afro Maya fashion and lifestyle e-commerce brand",
+      position: "50% 50%",
+    },
+    overviewSubtitle: "SNEAK PEAK INTO AFRO MAYA FASHION WORLD",
+    galleryImages: [
+      {
+        src: "/assets/afro/1.jpg",
+        alt: "Afro Maya contemporary fashion piece",
+        position: "50% 50%",
+      },
+      {
+        src: "/assets/afro/2.jpg",
+        alt: "Afro Maya lifestyle apparel",
+        position: "50% 50%",
+      },
+      {
+        src: "/assets/afro/3.jpg",
+        alt: "Afro Maya e-commerce collection",
+        position: "50% 50%",
+      },
+      {
+        src: "/assets/afro/4.jpg",
+        alt: "Afro Maya fashion brand shoot",
+        position: "50% 50%",
+      },
+    ],
+    goal:
+      "Build a stronger digital foundation that supports brand growth, customer engagement, and online sales.",
+    workIntro: "We supported the launch with a full 360 scope marketing approach:",
+    workItems: [
+      {
+        icon: "360",
+        text: "Website design and development",
+      },
+      {
+        icon: "creator",
+        text: "Content creation",
+      },
+      {
+        icon: "social",
+        text: "Social media management",
+      },
+      {
+        icon: "email",
+        text: "Email marketing",
+      },
+    ],
+    approach:
+      "Our focus was on creating a visual identity and user experience that represents the brand values. From developing the website to producing content and managing ongoing communications, we worked to strengthen Afro Maya's digital presence and generate opportunities for long-term growth.",
+    outcomes: [
+      {
+        icon: "megaphone",
+        text: "Launched a modern, responsive website",
+      },
+      {
+        icon: "bars",
+        text: "Creating content to showcase new products",
+      },
+      {
+        icon: "shield",
+        text: "Established a stronger customer base",
+      },
+      {
+        icon: "star",
+        text: "Strengthened the brand's presence across social",
+      },
+    ],
+    focusAreas: ["Social Media", "360 Marketing", "Content Creation"],
+    videoTitle: "afro maya fashion world",
+    videoSubtitle: "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
+    videoPreview: {
+      src: "/assets/blurred.png",
+      alt: "Blurred video preview of the Afro Maya campaign",
+      position: "50% 50%",
+    },
+    metadata: {
+      title: "Afro Maya E-Commerce Fashion | USS Projects",
+      description:
+        "A USS project overview for Afro Maya, driving growth for an e-commerce fashion brand through website development, content creation, and digital marketing.",
+    },
+  },
+  {
+    slug: "coshe-juices",
+    productName: "Coshe Juices",
+    title: "Growing a Wellness Membership Brand",
+    description:
+      "Coshe Juices is a wellness brand offering healthy juices, cleanses, and membership-based lifestyle solutions designed to support holistic living. USS partnered with Coshe to strengthen its digital presence and support membership growth through a combination of website development, marketing strategy, content, social media management, and email marketing.",
+    heroImage: {
+      src: "/assets/coshe/coshe.jpg",
+      alt: "Coshe Juices wellness brand lifestyle",
+      position: "50% 50%",
+    },
+    overviewSubtitle: "COSHE JUICES TAKING OVER WELLNESS INDUSTRY",
+    galleryImages: [
+      {
+        src: "/assets/coshe/1.jpg",
+        alt: "Coshe Juices healthy lifestyle product",
+        position: "50% 50%",
+      },
+      {
+        src: "/assets/coshe/2.png",
+        alt: "Coshe Juices membership growth campaign",
+        position: "50% 50%",
+      },
+      {
+        src: "/assets/coshe/3.jpg",
+        alt: "Coshe Juices wellness juice cleanse",
+        position: "50% 50%",
+      },
+      {
+        src: "/assets/coshe/4.png",
+        alt: "Coshe Juices digital ecosystem",
+        position: "50% 50%",
+      },
+    ],
+    goal:
+      "Increase membership sign-ups, improve the customer experience, and build a stronger digital ecosystem to support long-term growth.",
+    workIntro: "We supported the launch with a full 360 scope marketing approach:",
+    workItems: [
+      {
+        icon: "360",
+        text: "Website design and development",
+      },
+      {
+        icon: "creator",
+        text: "Marketing strategy",
+      },
+      {
+        icon: "email",
+        text: "Membership growth strategy",
+      },
+      {
+        icon: "social",
+        text: "Social media management",
+      },
+    ],
+    approach:
+      "Our focus was on creating a seamless customer journey, while building greater awareness around the Coshe membership offering. Through strategic content, email marketing, and ongoing social media management, we helped position Coshe as a leading wellness brand while supporting customer retention and membership growth.",
+    outcomes: [
+      {
+        icon: "megaphone",
+        text: "Increased membership by 250% in first month",
+      },
+      {
+        icon: "bars",
+        text: "Increased visibility across web and search terms",
+      },
+      {
+        icon: "shield",
+        text: "Improved brand loyalty and performance",
+      },
+      {
+        icon: "star",
+        text: "Generated key performance benchmarks",
+      },
+    ],
+    focusAreas: ["Website Design & Development", "Email Marketing", "Social Media"],
+    videoTitle: "mall of emirates launch",
+    videoSubtitle: "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
+    videoPreview: {
+      src: "/assets/blurred.png",
+      alt: "Blurred video preview of the Coshe Juices campaign",
+      position: "50% 50%",
+    },
+    metadata: {
+      title: "Coshe Juices Wellness Brand | USS Projects",
+      description:
+        "A USS project overview for Coshe Juices, growing a wellness membership brand through website development, marketing strategy, and social media management.",
+    },
+  },
+  {
+    slug: "mn-nail-spa",
+    productName: "M&N Nail Spa",
+    title: "Creating a Beauty Brand That Stands Out",
+    description:
+      "M&N Nail Spa is a luxury salon in London offering a wide range of nail, beauty, and wellness treatments designed to help clients look and feel their best. USS partnered with M&N Nail Spa to increase brand awareness, attract new customers, and strengthen their presence across digital channels through a combination of paid media, content creation, social media management, and marketing strategy.",
+    heroImage: {
+      src: "/assets/m&n/m&n.jpg",
+      alt: "M&N Nail Spa luxury salon experience",
+      position: "50% 50%",
+    },
+    overviewSubtitle: "M&N NAIL SPA CONTENT CREATION",
+    galleryImages: [
+      {
+        src: "/assets/m&n/1.jpg",
+        alt: "M&N Nail Spa beauty treatment",
+        position: "50% 50%",
+      },
+      {
+        src: "/assets/m&n/2.jpg",
+        alt: "M&N Nail Spa luxury interior",
+        position: "50% 50%",
+      },
+      {
+        src: "/assets/m&n/3.jpg",
+        alt: "M&N Nail Spa wellness service",
+        position: "50% 50%",
+      },
+      {
+        src: "/assets/m&n/4.jpg",
+        alt: "M&N Nail Spa premium client experience",
+        position: "50% 50%",
+      },
+    ],
+    goal:
+      "Increase visibility, attract new clients, and create a consistent brand presence that reflects the quality of the salon experience.",
+    workIntro: "We supported the launch with a full 360 scope marketing approach:",
+    workItems: [
+      {
+        icon: "creator",
+        text: "Marketing strategy",
+      },
+      {
+        icon: "360",
+        text: "Paid media management",
+      },
+      {
+        icon: "email",
+        text: "Content creation",
+      },
+      {
+        icon: "social",
+        text: "Campaign and event planning",
+      },
+    ],
+    approach:
+      "Our focus was on showcasing the luxury salon experience, positioning M&N Nail Spa as a premium beauty destination. Through engaging content, targeted advertising, and a consistent social media presence, we helped the brand connect with both new and existing customers.",
+    outcomes: [
+      {
+        icon: "megaphone",
+        text: "Increased awareness across key digital platforms",
+      },
+      {
+        icon: "bars",
+        text: "Increased footfall to physical locations by 30%",
+      },
+      {
+        icon: "shield",
+        text: "Improved local visibility and performance",
+      },
+      {
+        icon: "star",
+        text: "Produced content that highlighted the salon's premium services",
+      },
+    ],
+    focusAreas: ["Social Media", "360 Marketing", "Content Creation"],
+    videoTitle: "mall of emirates launch",
+    videoSubtitle: "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
+    videoPreview: {
+      src: "/assets/blurred.png",
+      alt: "Blurred video preview of the M&N Nail Spa campaign",
+      position: "50% 50%",
+    },
+    metadata: {
+      title: "M&N Nail Spa Brand Marketing | USS Projects",
+      description:
+        "A USS project overview for M&N Nail Spa, a luxury London salon, focused on content creation, social media management, and increasing physical footfall.",
+    },
+  },
+  {
+    slug: "tish-wonders",
+    productName: "Tish Wonders",
+    title: "Launching a Digital Product to a Global Audience",
+    description:
+      "Tish Wonders is a leading food and wellness creator, sharing healthy recipes, lifestyle content, and personal health inspiration with a global audience. USS partnered with Tish to support the launch of her healthy cooking e-book, combining website development, email strategy, and a targeted social and performance marketing campaign during the Black Friday period.",
+    heroImage: {
+      src: "/assets/tish/tish.png",
+      alt: "Tish Wonders healthy cooking e-book launch",
+      position: "50% 50%",
+    },
+    overviewSubtitle: "LAUNCHING E-BOOK DURING BLACK FRIDAY",
+    galleryImages: [
+      {
+        src: "/assets/tish/1.jpg",
+        alt: "Tish Wonders recipe content",
+        position: "50% 50%",
+      },
+      {
+        src: "/assets/tish/2.jpg",
+        alt: "Tish Wonders wellness lifestyle",
+        position: "50% 50%",
+      },
+      {
+        src: "/assets/tish/3.png",
+        alt: "Tish Wonders e-book product",
+        position: "50% 50%",
+      },
+      {
+        src: "/assets/tish/4.png",
+        alt: "Tish Wonders campaign creative",
+        position: "50% 50%",
+      },
+    ],
+    goal:
+      "Successfully launch a new digital product while leveraging an existing audience to drive awareness, engagement, and sales during a key Black Friday period.",
+    workIntro: "We supported the launch with a full 360 scope marketing approach:",
+    workItems: [
+      {
+        icon: "360",
+        text: "Website design and development",
+      },
+      {
+        icon: "creator",
+        text: "Marketing strategy",
+      },
+      {
+        icon: "email",
+        text: "Black Friday campaign planning",
+      },
+      {
+        icon: "social",
+        text: "Sales funnel optimization",
+      },
+    ],
+    approach:
+      "Our focus was on creating a seamless customer journey from discovery to purchase. By combining a dedicated website experience with a strategic launch campaign, we helped position the e-book as a valuable resource for Tish's audience while maximising visibility during one of the busiest shopping periods of the year.",
+    outcomes: [
+      {
+        icon: "megaphone",
+        text: "Selling out 100s of e-books in Black Friday weekend",
+      },
+      {
+        icon: "bars",
+        text: "Helped transform audience engagement into product sales",
+      },
+      {
+        icon: "shield",
+        text: "Improved local visibility and performance",
+      },
+      {
+        icon: "star",
+        text: "Exceeded key performance benchmarks",
+      },
+    ],
+    focusAreas: ["Social Media", "360 Marketing", "Content Creation"],
+    videoTitle: "mall of emirates launch",
+    videoSubtitle: "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
+    videoPreview: {
+      src: "/assets/blurred.png",
+      alt: "Blurred video preview of the Tish Wonders campaign",
+      position: "50% 50%",
+    },
+    metadata: {
+      title: "Tish Wonders E-Book Launch | USS Projects",
+      description:
+        "A USS project overview for Tish Wonders, launching a digital e-book to a global audience through website development, email strategy, and targeted marketing.",
+    },
+  },
+  {
+    slug: "residency-advanced",
+    productName: "Residency Advanced",
+    title: "Scaling Residency ddw",
+    description:
+      "Residency Advanced is a consultancy specializing in second citizenship and residency by investment programs, helping clients gain global mobility and greater freedom through alternative residencies. USS partnered with Residency Advanced to scale their operations and results by targeting qualified audiences actively searching for their services.",
+    heroImage: {
+      src: "/assets/st/st.png",
+      alt: "Residency Advanced second citizenship and residency",
+      position: "50% 50%",
+    },
+    overviewSubtitle: "SNEAK PEAK INTO RESIDENCY ADVANCED",
+    galleryImages: [
+      {
+        src: "/assets/st/1.png",
+        alt: "Residency Advanced global mobility passport",
+        position: "50% 50%",
+      },
+      {
+        src: "/assets/st/2.png",
+        alt: "Residency Advanced citizenship programs",
+        position: "50% 50%",
+      },
+      {
+        src: "/assets/st/3.jpg",
+        alt: "Residency Advanced global investment",
+        position: "50% 50%",
+      },
+      {
+        src: "/assets/st/4.jpg",
+        alt: "Residency Advanced alternative residencies",
+        position: "50% 50%",
+      },
+    ],
+    goal:
+      "Increase high-quality lead generation while improving visibility and performance across search.",
+    workIntro: "We supported the launch with a full 360 scope marketing approach:",
+    workItems: [
+      {
+        icon: "creator",
+        text: "Google Ads strategy and campaign setup",
+      },
+      {
+        icon: "360",
+        text: "Keyword research and audience segmentation",
+      },
+      {
+        icon: "email",
+        text: "Ad copy and performance optimization",
+      },
+      {
+        icon: "social",
+        text: "Overall marketing strategy for market entry",
+      },
+    ],
+    approach:
+      "Our focus was on capturing intent demand. By targeting users actively searching for residency and citizenship solutions, we built a campaign designed to attract qualified leads while maximizing ad spend and performance.",
+    outcomes: [
+      {
+        icon: "megaphone",
+        text: "150+ high-quality leads generated in two months",
+      },
+      {
+        icon: "bars",
+        text: "Increased visibility across web and search terms",
+      },
+      {
+        icon: "shield",
+        text: "Improved local visibility and performance",
+      },
+      {
+        icon: "star",
+        text: "Exceeded key performance benchmarks",
+      },
+    ],
+    focusAreas: ["Social Media", "360 Marketing", "Content Creation"],
+    videoTitle: "mall of emirates launch",
+    videoSubtitle: "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
+    videoPreview: {
+      src: "/assets/blurred.png",
+      alt: "Blurred video preview of the Residency Advanced campaign",
+      position: "50% 50%",
+    },
+    metadata: {
+      title: "Residency Advanced Campaign | USS Projects",
+      description:
+        "A USS project overview for Residency Advanced, scaling a second citizenship consultancy through targeted Google Ads and performance marketing.",
+    },
+  },
+  {
+    slug: "oak",
+    productName: "Residency Advanced",
+    title: "Scaling Residency ddw",
+    description:
+      "Residency Advanced is a consultancy specializing in second citizenship and residency by investment programs, helping clients gain global mobility and greater freedom through alternative residencies. USS partnered with Residency Advanced to scale their operations and results by targeting qualified audiences actively searching for their services.",
+    heroImage: {
+      src: "/assets/oak/oak.png",
+      alt: "Residency Advanced second citizenship and residency",
+      position: "50% 50%",
+    },
+    overviewSubtitle: "SNEAK PEAK INTO RESIDENCY ADVANCED",
+    galleryImages: [
+      {
+        src: "/assets/oak/1.png",
+        alt: "Residency Advanced global mobility passport",
+        position: "50% 50%",
+      },
+      {
+        src: "/assets/oak/2.png",
+        alt: "Residency Advanced citizenship programs",
+        position: "50% 50%",
+      },
+      {
+        src: "/assets/oak/3.png",
+        alt: "Residency Advanced global investment",
+        position: "50% 50%",
+      },
+      {
+        src: "/assets/oak/4.jpg",
+        alt: "Residency Advanced alternative residencies",
+        position: "50% 50%",
+      },
+    ],
+    goal:
+      "Increase high-quality lead generation while improving visibility and performance across search.",
+    workIntro: "We supported the launch with a full 360 scope marketing approach:",
+    workItems: [
+      {
+        icon: "creator",
+        text: "Google Ads strategy and campaign setup",
+      },
+      {
+        icon: "360",
+        text: "Keyword research and audience segmentation",
+      },
+      {
+        icon: "email",
+        text: "Ad copy and performance optimization",
+      },
+      {
+        icon: "social",
+        text: "Overall marketing strategy for market entry",
+      },
+    ],
+    approach:
+      "Our focus was on capturing intent demand. By targeting users actively searching for residency and citizenship solutions, we built a campaign designed to attract qualified leads while maximizing ad spend and performance.",
+    outcomes: [
+      {
+        icon: "megaphone",
+        text: "150+ high-quality leads generated in two months",
+      },
+      {
+        icon: "bars",
+        text: "Increased visibility across web and search terms",
+      },
+      {
+        icon: "shield",
+        text: "Improved local visibility and performance",
+      },
+      {
+        icon: "star",
+        text: "Exceeded key performance benchmarks",
+      },
+    ],
+    focusAreas: ["Social Media", "360 Marketing", "Content Creation"],
+    videoTitle: "mall of emirates launch",
+    videoSubtitle: "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
+    videoPreview: {
+      src: "/assets/blurred.png",
+      alt: "Blurred video preview of the Residency Advanced campaign",
+      position: "50% 50%",
+    },
+    metadata: {
+      title: "Residency Advanced Campaign | USS Projects",
+      description:
+        "A USS project overview for Residency Advanced, scaling a second citizenship consultancy through targeted Google Ads and performance marketing.",
+    },
+  },
 ] satisfies ProjectDetail[];
 
 export function getProjectDetail(slug: string) {
