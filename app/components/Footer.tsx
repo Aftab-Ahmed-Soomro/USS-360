@@ -45,10 +45,15 @@ export function Footer() {
         /* ── Top grid ── */
         .uss-footer-grid {
           display: grid;
-          grid-template-columns: minmax(0, 400px) minmax(0, 200px) minmax(0, 400px);
+          grid-template-columns: minmax(0, 400px) minmax(0, 200px) minmax(0, 350px) auto;
           justify-content: space-between;
           gap: 40px;
           align-items: start;
+        }
+
+        .uss-socials-wrapper {
+          align-self: flex-end;
+          padding-bottom: 6px;
         }
 
         /* ── Left column ── */
@@ -226,7 +231,7 @@ margin-top: 4px;
         .uss-bottom-bar {
           display: flex;
           align-items: center;
-          justify-content: space-between;
+          justify-content: center;
           gap: 16px;
           flex-wrap: wrap;
         }
@@ -339,7 +344,7 @@ margin-top: 4px;
 
             {/* Right: Office locations */}
             <div>
-              <h3 className="uss-col-heading">Location</h3>
+              <h3 className="uss-col-heading">Locations</h3>
               <div className="uss-offices-list">
                 {offices.map((office) => (
                   <div key={office.country} className="uss-office-row">
@@ -370,6 +375,22 @@ margin-top: 4px;
                 ))}
               </div>
             </div>
+
+            {/* Far Right: Socials */}
+            <div className="uss-socials-wrapper">
+              <div className="uss-socials">
+                {socials.map((s) => (
+                  <a
+                    key={s.label}
+                    href={s.href}
+                    className="uss-social-btn"
+                    aria-label={s.label}
+                  >
+                    {s.icon}
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* ── Bottom bar ── */}
@@ -377,19 +398,6 @@ margin-top: 4px;
             <p className="uss-copyright">
               © 2025 United Strategic Solutions. All rights reserved.
             </p>
-
-            <div className="uss-socials">
-              {socials.map((s) => (
-                <a
-                  key={s.label}
-                  href={s.href}
-                  className="uss-social-btn"
-                  aria-label={s.label}
-                >
-                  {s.icon}
-                </a>
-              ))}
-            </div>
           </div>
 
         </div>
