@@ -23,7 +23,7 @@ export function HomeHero() {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 w-full max-w-[1150px] mx-auto px-6 pt-24">
+      <div className="relative w-full max-w-[1150px] mx-auto px-6 pt-24">
         <div className="max-w-[900px]">
 
           {/* Headline — slides in from left, two lines staggered */}
