@@ -159,7 +159,7 @@ function ProjectsCta() {
 
 export default function ProjectsPage() {
   return (
-    <main className="min-h-screen bg-black">
+    <main className="min-h-screen bg-black overflow-hidden">
       <Header />
 
       {/* Hero section */}
@@ -195,10 +195,21 @@ export default function ProjectsPage() {
 
       {/* Categories scroll rows — each row slides in from left, staggered */}
       <section className="bg-black pb-[124px] pt-[20px] text-white sm:pb-[150px] overflow-hidden">
-        <div className="flex flex-col gap-8 sm:gap-12 pl-6 sm:pl-10 lg:pl-12">
+        <div className="flex flex-col gap-8 sm:gap-12">
           {categories.map((category, categoryIdx) => (
             <FadeLeft key={category.name} delay={0.1 + categoryIdx * 0.07}>
-              <div className="flex gap-4 sm:gap-6 overflow-x-auto pb-4 pr-6 sm:pr-10 lg:pr-12 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden snap-x snap-mandatory">
+              <div className="flex gap-4 sm:gap-6 overflow-x-auto pb-4 px-6 sm:px-10 lg:px-12 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden snap-x snap-mandatory">
+
+                {/* Intro Image card */}
+                <div className="snap-start shrink-0 relative w-[60px] sm:w-[80px] lg:w-[100px] rounded-r-[16px] overflow-hidden block -ml-6 sm:-ml-10 lg:-ml-12">
+                  <Image
+                    src="/assets/project-category.jpg"
+                    alt={`${category.name} intro background`}
+                    fill
+                    sizes="(min-width: 640px) 100px, 60px"
+                    className="object-cover"
+                  />
+                </div>
 
                 {/* Category label card */}
                 <div className="snap-start shrink-0 w-[260px] sm:w-[320px] aspect-[4/5] rounded-[16px] bg-[#0f0f0f] border border-white/5 relative p-6 flex flex-col justify-between">
@@ -247,7 +258,7 @@ export default function ProjectsPage() {
                       <h3 className="text-white text-xl sm:text-[22px] font-medium font-[var(--font-be-vietnam)] tracking-[-0.5px]">
                         {project.title}
                       </h3>
-                      <p className="text-white/70 text-[12px] sm:text-[13px] mt-1 font-[var(--font-inter)] line-clamp-2 leading-[1.4]">
+                      <p className="text-white/50 text-[12px] sm:text-[13px] mt-1 font-[var(--font-inter)] line-clamp-2 leading-[1.4]">
                         {project.description}
                       </p>
                     </div>

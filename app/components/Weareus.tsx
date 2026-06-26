@@ -27,33 +27,33 @@ export default function WeAreUSS() {
 
         {/* CENTER — Portrait — rises up from below */}
         <FadeUp delay={0.2}>
-          <div className="relative order-2 lg:order-none w-full aspect-[700/750]">
-            <Image
-              src="/assets/uss.png"
-              alt="USS team collaborating"
-              fill
-              className="object-cover object-center"
-              priority
-              sizes="(min-width: 1024px) 39vw, 100vw"
-            />
-          </div>
-        </FadeUp>
+        <div className="relative order-2 lg:order-none w-full aspect-[700/750]">
+          <Image
+            src="/assets/uss.png"
+            alt="USS team collaborating"
+            fill
+            className="object-cover object-center"
+            priority
+            sizes="(min-width: 1024px) 39vw, 100vw"
+          />
+        </div>
+      </FadeUp>
 
-        {/* RIGHT — Description text — slides in from right */}
-        <FadeRight delay={0.1}>
-          <div className="flex items-center justify-end py-16 lg:py-0 order-3 lg:order-none">
-            <div className="text-right text-[#bdbcbc] max-w-[270px] flex flex-col gap-8">
-              <p className="text-[12px] leading-[1.95] font-medium">
-                At USS, We Focus On One Thing, Growth That Actually Translates Into Revenue. We Help Brands Across The US, UK, And Middle East Scale Through High-Performance Meta Ads, Google Ads, And Retention-Driven Email Systems.
-              </p>
-              <p className="text-[12px] leading-[1.95] font-medium">
-                At Some Point, You Realize Guessing Doesn&apos;t Scale.
-              </p>
-            </div>
+      {/* RIGHT — Description text — slides in from right */}
+      <FadeRight delay={0.1}>
+        <div className="flex items-center justify-end py-16 lg:py-0 order-3 lg:order-none">
+          <div className="text-right text-[#bdbcbc] max-w-[270px] flex flex-col gap-8">
+            <p className="text-[12px] leading-[1.95] font-medium">
+              At USS, We Focus On One Thing, Growth That Actually Translates Into Revenue. We Help Brands Across The US, UK, And Middle East Scale Through High-Performance Meta Ads, Google Ads, And Retention-Driven Email Systems.
+            </p>
+            <p className="text-[12px] leading-[1.95] font-medium">
+              At Some Point, You Realize Guessing Doesn&apos;t Scale.
+            </p>
           </div>
-        </FadeRight>
+        </div>
+      </FadeRight>
 
-      </div>
-    </section>
+    </div>
+    </section >
   );
 }
