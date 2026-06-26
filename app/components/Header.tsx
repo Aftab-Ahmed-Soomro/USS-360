@@ -6,7 +6,7 @@ import { Button } from "./common/Button";
 
 const navItems = [
   { label: "About", href: "/about" },
-  { label: "Solutions", href: "/#solutions" },
+  { label: "Services", href: "/" },
   { label: "Projects", href: "/projects" },
   { label: "Contact", href: "/contact" },
 ];

@@ -6,6 +6,7 @@ import FadeLeft from "../components/FadeLeft";
 import FadeDown from "../components/FadeDown";
 import FadeUp from "../components/FadeUp";
 import FadeRight from "../components/FadeRight";
+import { DraggableContainer } from "../components/DraggableContainer";
 
 const categories = [
   {
@@ -13,9 +14,9 @@ const categories = [
     topTag: "Helping Brands Establish",
     bottomTag: "Brands Launching",
     projects: [
-      { title: "CINNAMOOD", description: "Franchise Expanding To Dubai", image: "/assets/projectsPagePics/cinamood.jpg", tags: ["UAE Expansion"], href: "#" },
-      { title: "Coshe", description: "Wellness Juices", image: "/assets/projectsPagePics/Coshe.jpg", tags: ["Brand Launch"], href: "#" },
-      { title: "Oak Restaurant", description: "Building awareness for a new dining experience.", image: "/assets/projectsPagePics/oak.png", tags: ["Restaurant Launch"], href: "#" }
+      { title: "CINNAMOOD", description: "Franchise Expanding To Dubai", image: "/assets/projectsPagePics/cinamood.jpg", tags: ["UAE Expansion"], href: "/projects/cinamood" },
+      { title: "Coshe", description: "Wellness Juices", image: "/assets/projectsPagePics/Coshe.jpg", tags: ["Brand Launch"], href: "/projects/coshe-juices" },
+      { title: "Oak Restaurant", description: "Building awareness for a new dining experience.", image: "/assets/projectsPagePics/oak.png", tags: ["Restaurant Launch"], href: "/projects/oak" }
     ]
   },
   {
@@ -23,9 +24,9 @@ const categories = [
     topTag: "Travel & Tourism",
     bottomTag: "Helping Tourism Grow",
     projects: [
-      { title: "SupperClub", description: "Scaling Supperclub Membership", image: "/assets/projectsPagePics/supper.png", tags: ["Scaling Business"], href: "#" },
-      { title: "Yula", description: "Transforming Yalseh into Yula", image: "/assets/projectsPagePics/yula.jpg", tags: ["Rebrand"], href: "#" },
-      { title: "Reclaim", description: "Launching Reclaim in the US", image: "/assets/projectsPagePics/reclaim.png", tags: ["Scaling Business"], href: "#" }
+      { title: "SupperClub", description: "Scaling Supperclub Membership", image: "/assets/projectsPagePics/supper.png", tags: ["Scaling Business"], href: "/projects/supperclub" },
+      { title: "Yula", description: "Transforming Yalseh into Yula", image: "/assets/projectsPagePics/yula.jpg", tags: ["Rebrand"], href: "/projects/yula-beach-lounge" },
+      { title: "Reclaim", description: "Launching Reclaim in the US", image: "/assets/projectsPagePics/reclaim.png", tags: ["Scaling Business"], href: "/projects/reclaim-us" }
     ]
   },
   {
@@ -33,8 +34,8 @@ const categories = [
     topTag: "Helping Business Expand",
     bottomTag: "Helping Business Grow",
     projects: [
-      { title: "Flowork", description: "Office Opening in Dubai Hills", image: "/assets/projectsPagePics/flowork.png", tags: ["Scaling Business"], href: "#" },
-      { title: "Residency Advanced", description: "Paid Search Lead Generation", image: "/assets/projectsPagePics/residency.png", tags: ["Scaling Business"], href: "#" }
+      { title: "Flowork", description: "Office Opening in Dubai Hills", image: "/assets/projectsPagePics/flowork.png", tags: ["Scaling Business"], href: "/projects/flowork" },
+      { title: "Residency Advanced", description: "Paid Search Lead Generation", image: "/assets/projectsPagePics/residency.png", tags: ["Scaling Business"], href: "/projects/residency-advanced" }
     ]
   },
   {
@@ -42,8 +43,8 @@ const categories = [
     topTag: "Helping Business Expand",
     bottomTag: "Helping Business Grow",
     projects: [
-      { title: "PrecisionTalk", description: "AI Voice Agent Expanding in UAE", image: "/assets/projectsPagePics/precision.png", tags: ["Scaling Business"], href: "#" },
-      { title: "Disturbed Innovations Group", description: "3D Immersive Experiences", image: "/assets/projectsPagePics/disturbed.jpg", tags: ["Scaling Business"], href: "#" }
+      { title: "PrecisionTalk", description: "AI Voice Agent Expanding in UAE", image: "/assets/projectsPagePics/precision.png", tags: ["Scaling Business"], href: "/projects/precision-talk" },
+      { title: "Disturbed Innovations Group", description: "3D Immersive Experiences", image: "/assets/projectsPagePics/disturbed.jpg", tags: ["Scaling Business"], href: "/projects/disturbed-innovations" }
     ]
   },
   {
@@ -51,9 +52,10 @@ const categories = [
     topTag: "Helping Business Expand",
     bottomTag: "Helping Business Grow",
     projects: [
-      { title: "Women Who Thrive", description: "Networking Event Membership", image: "/assets/projectsPagePics/women.jpg", tags: ["Scaling Business"], href: "#" },
-      { title: "Adidas UAE", description: "Product Event For New Launch", image: "/assets/projectsPagePics/adidas.jpg", tags: ["Scaling Business"], href: "#" },
-      { title: "Blank DXB", description: "New Warehouse Events", image: "/assets/projectsPagePics/blank.png", tags: ["Scaling Business"], href: "#" }
+      { title: "Women Who Thrive", description: "Networking Event Membership", image: "/assets/projectsPagePics/women.jpg", tags: ["Scaling Business"], href: "/projects/women-who-thrive" },
+      { title: "Adidas UAE", description: "Product Event For New Launch", image: "/assets/projectsPagePics/adidas.jpg", tags: ["Scaling Business"], href: "/projects/adidas-middle-east" },
+      { title: "Blank DXB", description: "New Warehouse Events", image: "/assets/projectsPagePics/blank.png", tags: ["Scaling Business"], href: "/projects/blank-dxb" },
+      { title: "Fete Events", description: "Premium Event Planning", image: "/assets/fete/1.png", tags: ["Scaling Business"], href: "/projects/fete-events" }
     ]
   },
   {
@@ -61,8 +63,7 @@ const categories = [
     topTag: "Helping Business Expand",
     bottomTag: "Helping Business Grow",
     projects: [
-      { title: "Afro Maya", description: "Fashion E-Commerce Brand", image: "/assets/projectsPagePics/afro.jpg", tags: ["Scaling Business"], href: "#" },
-      { title: "Afro Maya", description: "Fashion E-Commerce Brand", image: "/assets/projectsPagePics/afro.jpg", tags: ["Scaling Business"], href: "#" }
+      { title: "Afro Maya", description: "Fashion E-Commerce Brand", image: "/assets/projectsPagePics/afro.jpg", tags: ["Scaling Business"], href: "/projects/afro-maya" }
     ]
   },
   {
@@ -70,7 +71,7 @@ const categories = [
     topTag: "Helping Business Expand",
     bottomTag: "Helping Business Grow",
     projects: [
-      { title: "M&N Nail Spa", description: "Beauty Treatment Salon in Dubai", image: "/assets/projectsPagePics/m&n.png", tags: ["Scaling Business"], href: "#" }
+      { title: "M&N Nail Spa", description: "Beauty Treatment Salon in Dubai", image: "/assets/projectsPagePics/m&n.png", tags: ["Scaling Business"], href: "/projects/mn-nail-spa" }
     ]
   },
   {
@@ -78,8 +79,8 @@ const categories = [
     topTag: "Helping Business Expand",
     bottomTag: "Helping Business Grow",
     projects: [
-      { title: "Sadia Phycology", description: "Black Friday Planner Project", image: "/assets/projectsPagePics/sadia.png", tags: ["Scaling Business"], href: "#" },
-      { title: "Tish Wonders", description: "New E-Book Launch", image: "/assets/projectsPagePics/tesh.png", tags: ["Scaling Business"], href: "#" }
+      { title: "Sadia Phycology", description: "Black Friday Planner Project", image: "/assets/projectsPagePics/sadia.png", tags: ["Scaling Business"], href: "/projects/sadia-psychology" },
+      { title: "Tish Wonders", description: "New E-Book Launch", image: "/assets/projectsPagePics/tesh.png", tags: ["Scaling Business"], href: "/projects/tish-wonders" }
     ]
   },
   {
@@ -87,7 +88,7 @@ const categories = [
     topTag: "Helping Business Expand",
     bottomTag: "Helping Business Grow",
     projects: [
-      { title: "Agency 8", description: "Real Estate Agency in Dubai", image: "/assets/projectsPagePics/agency.png", tags: ["Scaling Business"], href: "#" },
+      { title: "Agency 8", description: "Real Estate Agency in Dubai", image: "/assets/projectsPagePics/agency.png", tags: ["Scaling Business"], href: "/projects/agency-8" },
       { title: "Fabri Elite", description: "Luxury Agency in UAE", image: "/assets/projectsPagePics/fabri.jpg", tags: ["Scaling Business"], href: "#" },
       { title: "St. George Estate", description: "Real Estate Agency in Dubai", image: "/assets/projectsPagePics/st.png", tags: ["Scaling Business"], href: "#" }
     ]
@@ -198,7 +199,7 @@ export default function ProjectsPage() {
         <div className="flex flex-col gap-8 sm:gap-12">
           {categories.map((category, categoryIdx) => (
             <FadeLeft key={category.name} delay={0.1 + categoryIdx * 0.07}>
-              <div className="flex gap-4 sm:gap-6 overflow-x-auto pb-4 px-6 sm:px-10 lg:px-12 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden snap-x snap-mandatory">
+              <DraggableContainer className="flex gap-4 sm:gap-6 overflow-x-auto pb-4 px-6 sm:px-10 lg:px-12 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden snap-x snap-mandatory">
 
                 {/* Intro Image card */}
                 <div className="snap-start shrink-0 relative w-[60px] sm:w-[80px] lg:w-[100px] rounded-r-[16px] overflow-hidden block -ml-6 sm:-ml-10 lg:-ml-12">
@@ -264,7 +265,7 @@ export default function ProjectsPage() {
                     </div>
                   </Link>
                 ))}
-              </div>
+              </DraggableContainer>
             </FadeLeft>
           ))}
         </div>
