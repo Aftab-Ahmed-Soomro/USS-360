@@ -46,10 +46,10 @@ export default function ContactHero() {
     <section className="relative w-full bg-[#000] overflow-hidden py-28">
       {/* Ambient glow */}
       <div
-        className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 max-w-[1150px] h-[700px]"
+        className="pointer-events-none absolute top-0 left-0 w-full h-[800px]"
         style={{
           background:
-            "radial-gradient(ellipse at 50% 0%, rgba(255,90,20,0.16) 0%, rgba(255,60,10,0.06) 35%, rgba(10,10,10,0) 70%)",
+            "radial-gradient(circle at 50% 0%, #FF550033 0%, transparent 60%)",
         }}
       />
 
@@ -57,7 +57,7 @@ export default function ContactHero() {
       {/* <FadeDown delay={0.05}> */}
         <div className="pointer-events-none absolute top-[20px] left-0 w-full flex justify-center select-none">
           <h1
-            className="font-bold uppercase text-[#1a1419] tracking-tight whitespace-nowrap"
+            className="font-bold uppercase text-[#fff]/8 tracking-tight whitespace-nowrap"
             style={{ fontSize: "clamp(5rem, 14vw, 13rem)", fontFamily: "Poppins, sans-serif" }}
           >
             CONTACT
