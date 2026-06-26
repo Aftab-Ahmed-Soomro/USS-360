@@ -23,7 +23,7 @@ export function HomeHero() {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 w-full max-w-[1150px] mx-auto px-6 pt-34">
+      <div className="relative z-10 w-full max-w-[1150px] mx-auto px-6 pt-24">
         <div className="max-w-[900px]">
 
           {/* Headline — slides in from left, two lines staggered */}
@@ -39,7 +39,7 @@ export function HomeHero() {
 
           {/* Tagline — drops down after headline */}
           <FadeDown delay={0.3}>
-            <p className="mt-8 md:mt-12 text-white text-[12px] md:text-[14px] font-bold tracking-[0.4em] uppercase">
+            <p className="mt-4 text-white text-[12px] md:text-[14px] font-bold tracking-[0.4em] uppercase">
               WE ARE USS
             </p>
           </FadeDown>
@@ -60,13 +60,13 @@ export function HomeHero() {
       </div>
 
       {/* Let's Connect — slides in from right, bottom corner */}
-      <FadeRight delay={0.55}>
+      {/* <FadeRight delay={0.55}> */}
         <div className="absolute bottom-8 right-6 md:bottom-12 md:right-12 z-10">
           <Link href="#connect" className="text-white text-[20px] md:text-[28px] tracking-tight hover:opacity-80 transition flex items-center gap-1">
             <span className="font-medium">let&apos;s</span> <span className="font-bold">connect</span>
           </Link>
         </div>
-      </FadeRight>
+      {/* </FadeRight> */}
 
     </section>
   );

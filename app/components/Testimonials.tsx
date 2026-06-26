@@ -74,7 +74,7 @@ function ArrowButton({
     <button
       onClick={onClick}
       aria-label={direction === "left" ? "Previous testimonial" : "Next testimonial"}
-      className="grid size-10 place-items-center rounded-full bg-white/10 border border-white/20 text-white transition hover:bg-[#ff5500] hover:border-[#ff5500] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff5500]"
+      className="grid cursor-pointer size-10 place-items-center rounded-full bg-white/10 border border-white/20 text-white transition hover:bg-[#ff5500] hover:border-[#ff5500] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff5500]"
     >
       <span className="text-[20px] leading-none">
         {direction === "left" ? "\u2190" : "\u2192"}
@@ -96,8 +96,8 @@ export function Testimonials() {
   };
 
   return (
-    <section className="relative z-10 bg-[#0a0a0a] px-6 py-[58px] text-white lg:py-[80px]">
-      <div className="mx-auto flex w-full max-w-[1200px] flex-col items-center">
+    <section className="relative z-10 bg-[#0a0a0a] py-[58px] text-white lg:py-[80px]">
+      <div className="mx-auto flex w-full max-w-[1150px] flex-col items-center px-6">
 
         {/* Eyebrow pill — drops down */}
         <FadeDown delay={0.1}>
@@ -122,7 +122,7 @@ export function Testimonials() {
 
             {/* Left Arrow — slides in from left */}
             {/* <FadeLeft delay={0.45}> */}
-              <div className="absolute -left-5 top-[calc(50%-16px)] -translate-y-1/2 z-10 opacity-100 transition-opacity duration-300">
+              <div className="absolute -left-5 top-[calc(50%-16px)] -translate-y-1/2 z-10 opacity-100 transition-opacity cursor-pointer duration-300">
                 <ArrowButton direction="left" onClick={() => scroll("left")} />
               </div>
             {/* </FadeLeft> */}
@@ -164,7 +164,7 @@ export function Testimonials() {
 
             {/* Right Arrow — slides in from right */}
             {/* <FadeRight delay={0.45}> */}
-              <div className="absolute -right-5 top-[calc(50%-16px)] -translate-y-1/2 z-10 opacity-100 transition-opacity duration-300">
+              <div className="absolute -right-5 top-[calc(50%-16px)] -translate-y-1/2 z-10 opacity-100 cursor-pointer transition-opacity duration-300">
                 <ArrowButton direction="right" onClick={() => scroll("right")} />
               </div>
             {/* </FadeRight> */}

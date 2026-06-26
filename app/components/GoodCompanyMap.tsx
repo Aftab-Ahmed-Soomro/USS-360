@@ -6,8 +6,8 @@ import FadeRight from "./FadeRight";
 
 export function GoodCompanyMap() {
   return (
-    <section className="relative z-10 border-t border-t-black w-full bg-white py-16 md:py-24 px-4 overflow-hidden">
-      <div className="w-full max-w-6xl mx-auto flex flex-col items-center">
+    <section className="relative z-10 border-t border-t-black w-full bg-white py-16 md:py-24 px-6 overflow-hidden">
+      <div className="w-full max-w-[1150px] mx-auto flex flex-col items-center ">
 
         {/* Main heading — fades up */}
         <FadeUp delay={0.1}>

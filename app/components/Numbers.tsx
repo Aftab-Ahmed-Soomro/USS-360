@@ -56,7 +56,7 @@ export function Numbers({
       <div className="absolute inset-0 bg-gradient-to-r from-black via-black/45 to-black/20" />
       <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-transparent to-black/35" />
 
-      <div className="relative mx-auto max-w-[1150px]">
+      <div className="relative mx-auto max-w-[1150px] px-6">
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
 
           {/* Eyebrow + Title — left se slide in */}

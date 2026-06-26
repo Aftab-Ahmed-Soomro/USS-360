@@ -63,8 +63,8 @@ const workWays = [
 
 function Strategic() {
   return (
-    <section className="bg-[#f7f7f6] px-6 pb-[50px] pt-[80px] text-black lg:pt-[81px]">
-      <div className="mx-auto max-w-[1150px]">
+    <section className="bg-[#f7f7f6] pb-[50px] pt-[80px] text-black lg:pt-[81px]">
+      <div className="mx-auto max-w-[1150px] px-6">
 
         {/* Section label — drops in from above */}
         <div className="text-center">

@@ -39,11 +39,11 @@ export default function AboutPage() {
 
         <BrandElevationVideo />
 
-        <section className="relative overflow-hidden bg-black px-6 py-16 md:py-24 lg:py-32 text-black">
+        <section className="relative overflow-hidden bg-black  py-16 md:py-24 lg:py-32 text-black">
 
           {/* Section heading — slides in from left */}
           <FadeLeft delay={0.1}>
-            <div className="mx-auto max-w-[1200px] mb-12 md:mb-16">
+            <div className="mx-auto max-w-[1150px] px-6 mb-12 md:mb-16">
               <p
                 className="text-[#fff] font-medium tracking-normal leading-none"
                 style={{ fontSize: "clamp(1.5rem, 2.5vw, 3rem)", fontWeight: 400 }}
@@ -62,7 +62,7 @@ export default function AboutPage() {
             </div>
           </FadeLeft>
 
-          <div className="mx-auto max-w-[1200px] grid grid-cols-1 md:grid-cols-[240px_1fr] lg:grid-cols-[280px_1fr] gap-10 lg:gap-16 items-start">
+          <div className="mx-auto max-w-[1150px] px-6 grid grid-cols-1 md:grid-cols-[240px_1fr] lg:grid-cols-[280px_1fr] gap-10 lg:gap-16 items-start">
 
             {/* LEFT — Portrait — slides in from left */}
             <FadeLeft delay={0.2}>
