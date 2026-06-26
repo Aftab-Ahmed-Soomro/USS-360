@@ -66,14 +66,19 @@ export function Header() {
         <nav
           id="main-navigation"
           aria-label="Main navigation"
-          className={`mt-4 flex w-full flex-col gap-3 overflow-hidden border-t border-white/10 pt-4 transition-[max-height,opacity] duration-200 md:order-1 md:mt-0 md:w-auto md:flex-row md:items-center md:gap-8 md:overflow-visible md:border-0 md:pt-0 md:opacity-100 lg:gap-12 xl:gap-[112px] ${
-            isMenuOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0 md:max-h-none"
-          }`}
+          className={`mt-4 flex w-full flex-col gap-3 overflow-hidden border-t border-white/10 pt-4 transition-[max-height,opacity] duration-200 md:order-1 md:mt-0 md:w-auto md:flex-row md:items-center md:gap-8 md:overflow-visible md:border-0 md:pt-0 md:opacity-100 lg:gap-12 xl:gap-[112px] ${isMenuOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0 md:max-h-none"
+            }`}
         >
           {navItems.map((item) =>
             item.hasDropdown ? (
               /* ── Services with dropdown ── */
-              <div key={item.label} className="relative" ref={servicesRef}>
+              <div
+                key={item.label}
+                className="relative"
+                ref={servicesRef}
+                onMouseEnter={() => setIsServicesOpen(true)}
+                onMouseLeave={() => setIsServicesOpen(false)}
+              >
                 {/* Desktop trigger */}
                 <button
                   type="button"
@@ -95,11 +100,14 @@ export function Header() {
                 </button>
 
                 {/* Desktop dropdown panel */}
+                {/* Invisible bridge fills the gap between button and panel so mouseleave
+                    is never triggered while the cursor travels downward. */}
+                <div className="absolute left-0 right-0 top-full h-6 hidden md:block" />
+
                 <div
                   ref={dropdownRef}
-                  className={`absolute left-1/2 top-[calc(100%+18px)] z-50 -translate-x-1/2 transition-all duration-200 hidden md:block ${
-                    isServicesOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-2 pointer-events-none"
-                  }`}
+                  className={`absolute left-1/2 top-[calc(100%+24px)] z-50 -translate-x-1/2 transition-all duration-200 hidden md:block ${isServicesOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-2 pointer-events-none"
+                    }`}
                   style={{ width: "340px" }}
                 >
                   {/* Arrow */}
@@ -159,9 +167,8 @@ export function Header() {
                   </button>
 
                   <div
-                    className={`overflow-hidden transition-[max-height,opacity] duration-200 ${
-                      isMobileServicesOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-                    }`}
+                    className={`overflow-hidden transition-[max-height,opacity] duration-200 ${isMobileServicesOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                      }`}
                   >
                     <div className="mt-2 flex flex-col gap-0.5 border-l border-[#ff6b1f]/30 pl-3">
                       {serviceLinks.map((service) => (
