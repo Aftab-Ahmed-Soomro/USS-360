@@ -484,7 +484,7 @@ function FinalCta() {
 
 export default function GoogleAdsPage() {
   return (
-    <main className="min-h-screen bg-black">
+    <main className="min-h-screen bg-black overflow-hidden">
       <Header />
       <Hero />
       <WhyAdsFail />

@@ -367,7 +367,7 @@ function FinalCta() {
 
 export default function WhatsappAndSmsPage() {
   return (
-    <main className="min-h-screen bg-[#080808]">
+    <main className="min-h-screen bg-[#080808] overflow-hidden">
       <Header />
       <Hero />
       <ProblemSection />
